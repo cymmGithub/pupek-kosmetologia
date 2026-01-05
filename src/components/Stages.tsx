@@ -4,6 +4,7 @@ import stagesBeforeVisit from '@/assets/stages-before-visit.jpg';
 import stagesConsultation from '@/assets/stages-consultation.jpg';
 import stagesSummary from '@/assets/stages-summary.jpg';
 import stagesTreatments from '@/assets/stages-treatments.jpg';
+import willowBg from '/willow.png';
 
 const stages = [
   {
@@ -88,8 +89,22 @@ const Stages = () => {
   const { ref: titleRef } = useScrollReveal();
 
   return (
-    <section id="stages" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="stages" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src={willowBg}
+          alt=""
+          className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.08] transform rotate-12"
+        />
+        <img
+          src={willowBg}
+          alt=""
+          className="absolute bottom-20 left-0 w-48 md:w-80 opacity-[0.06] transform -rotate-12 scale-x-[-1]"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div ref={titleRef} className="text-center mb-16 md:mb-20">
           <span className="text-primary/80 tracking-[0.3em] uppercase text-sm font-medium">
             Rozpocznij zmianę

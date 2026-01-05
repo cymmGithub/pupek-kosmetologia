@@ -1,6 +1,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Sparkles, Droplets, Sun, Heart, Leaf, LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import willowBg from '/willow.png';
 
 interface Service {
   icon: LucideIcon;
@@ -55,8 +56,22 @@ const Services = () => {
   const { ref: gridRef, isVisible: gridVisible } = useScrollReveal(0.05);
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="services" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src={willowBg}
+          alt=""
+          className="absolute top-0 left-10 w-56 md:w-72 opacity-[0.07] transform -rotate-6"
+        />
+        <img
+          src={willowBg}
+          alt=""
+          className="absolute bottom-0 right-10 w-64 md:w-96 opacity-[0.09] transform rotate-6 scale-x-[-1]"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
         <div
           ref={titleRef}
