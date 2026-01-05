@@ -47,11 +47,15 @@ const Header = () => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="font-serif text-2xl md:text-3xl tracking-wider"
+            className="flex items-center"
           >
-            <span className={isScrolled ? 'text-foreground' : 'text-primary-foreground'}>
-              LUMIÈRE
-            </span>
+            <img
+              src="/logo-v1.png"
+              alt="LUMIÈRE"
+              className={`w-auto transition-all duration-500 ${
+                isScrolled ? 'h-16 invert' : 'h-16 md:h-36'
+              }`}
+            />
           </a>
 
           {/* Desktop Navigation */}
