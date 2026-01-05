@@ -3,7 +3,7 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { name: 'Strona główna', href: '#home' },
+  { name: 'Etapy Współpracy', href: '#stages' },
   { name: 'Usługi', href: '#services' },
   { name: 'O nas', href: '#about' },
   { name: 'Kontakt', href: '#contact' },
@@ -84,7 +84,7 @@ const Header = () => {
               }`}
             >
               <Phone className="h-4 w-4" />
-              <span>515-157-681</span>
+              <span>+48 515-157-681</span>
             </a>
           </div>
 

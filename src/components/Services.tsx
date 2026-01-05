@@ -93,13 +93,6 @@ const Services = () => {
             </article>
           ))}
         </div>
-
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <Button variant="outline" size="lg" className="px-10 py-6 tracking-wider">
-            ZOBACZ WSZYSTKIE ZABIEGI
-          </Button>
-        </div>
       </div>
     </section>
   );

@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
+        milven: ['Milven', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
