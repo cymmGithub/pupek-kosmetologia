@@ -8,35 +8,35 @@ import stagesTreatments from '@/assets/stages-treatments.jpg';
 const stages = [
   {
     number: '01',
-    title: 'Before Your Visit',
-    subtitle: 'Preparation Phase',
+    title: 'Przed Twoją Wizytą',
+    subtitle: 'Faza Przygotowania',
     icon: FileText,
     image: stagesBeforeVisit,
-    description: 'Once you book your consultation, we send you a detailed PDF guide via email with preparation instructions. This includes photographing your current skincare routine, recalling previous treatments, and properly preparing your skin before the consultation.',
+    description: 'Po zarezerwowaniu konsultacji wysyłamy Ci szczegółowy przewodnik PDF e-mailem z instrukcjami przygotowania. Obejmuje to zrobienie zdjęć Twojej obecnej pielęgnacji skóry, przypomnienie poprzednich zabiegów i właściwe przygotowanie skóry przed konsultacją.',
   },
   {
     number: '02',
-    title: 'In-Person Consultation',
-    subtitle: 'Three-Part Assessment',
+    title: 'Konsultacja Osobista',
+    subtitle: 'Trójczęściowa Ocena',
     icon: Stethoscope,
     image: stagesConsultation,
-    description: 'Your consultation consists of three parts: a comprehensive cosmetic interview about your skin condition and health, advanced skin diagnostics using the Observ 520x device with 8 diagnostic modules, and a hands-on palpation assessment of skin quality, density, and firmness.',
+    description: 'Twoja konsultacja składa się z trzech części: kompleksowego wywiadu kosmetycznego dotyczącego stanu i zdrowia Twojej skóry, zaawansowanej diagnostyki skóry przy użyciu urządzenia Observ 520x z 8 modułami diagnostycznymi oraz praktycznej oceny palpacyjnej jakości, gęstości i jędrności skóry.',
   },
   {
     number: '03',
-    title: 'Consultation Summary',
-    subtitle: 'Personalized Report',
+    title: 'Podsumowanie Konsultacji',
+    subtitle: 'Spersonalizowany Raport',
     icon: Mail,
     image: stagesSummary,
-    description: 'Within a week, you receive a detailed email containing: Observ 520x photos with descriptions, interview summary with care recommendations, tailored skincare routine for face, body and hair, plus universal skincare tips for your skin type.',
+    description: 'W ciągu tygodnia otrzymujesz szczegółową wiadomość e-mail zawierającą: zdjęcia z Observ 520x z opisami, podsumowanie wywiadu z zaleceniami pielęgnacyjnymi, spersonalizowaną rutynę pielęgnacji twarzy, ciała i włosów, oraz uniwersalne wskazówki pielęgnacyjne dla Twojego typu skóry.',
   },
   {
     number: '04',
-    title: 'Treatment Sessions',
-    subtitle: 'Customized Care',
+    title: 'Sesje Zabiegowe',
+    subtitle: 'Spersonalizowana Opieka',
     icon: Sparkles,
     image: stagesTreatments,
-    description: 'Following consultation (or after a necessary waiting period for sensitive skin), we begin treatments tailored specifically to your skin\'s needs. Sessions are scheduled every 3-4 weeks for optimal results.',
+    description: 'Po konsultacji (lub po niezbędnym okresie oczekiwania w przypadku wrażliwej skóry) rozpoczynamy zabiegi dostosowane specjalnie do potrzeb Twojej skóry. Sesje są planowane co 3-4 tygodnie dla optymalnych rezultatów.',
   },
 ];
 
@@ -92,13 +92,13 @@ const Stages = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div ref={titleRef} className="text-center mb-16 md:mb-20">
           <span className="text-primary/80 tracking-[0.3em] uppercase text-sm font-medium">
-            Your Journey
+            Rozpocznij zmianę
           </span>
           <h2 className="font-serif text-3xl md:text-5xl text-foreground mt-4 mb-6">
-            Stages of Cooperation
+            Etapy Współpracy
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            A structured approach to achieving your skin goals, from initial consultation to ongoing treatments.
+            Ustrukturyzowane podejście do osiągania celów dotyczących Twojej skóry, od pierwszej konsultacji do bieżących zabiegów.
           </p>
         </div>
 

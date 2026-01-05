@@ -3,10 +3,10 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Services', href: '#services' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Strona główna', href: '#home' },
+  { name: 'Usługi', href: '#services' },
+  { name: 'O nas', href: '#about' },
+  { name: 'Kontakt', href: '#contact' },
 ];
 
 const Header = () => {
@@ -84,7 +84,7 @@ const Header = () => {
               }`}
             >
               <Phone className="h-4 w-4" />
-              <span>Book Now</span>
+              <span>515-157-681</span>
             </a>
           </div>
 
@@ -94,7 +94,7 @@ const Header = () => {
             className={`lg:hidden p-2 transition-colors ${
               isScrolled ? 'text-foreground' : 'text-primary-foreground'
             }`}
-            aria-label="Toggle menu"
+            aria-label="Przełącz menu"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -122,7 +122,7 @@ const Header = () => {
             ))}
             <Button variant="default" className="mt-2">
               <Phone className="h-4 w-4 mr-2" />
-              Book Appointment
+              Umów wizytę
             </Button>
           </nav>
         </div>

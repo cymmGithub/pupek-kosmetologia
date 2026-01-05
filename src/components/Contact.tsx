@@ -19,38 +19,38 @@ const Contact = () => {
               formVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">GET IN TOUCH</p>
+            <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">SKONTAKTUJ SIĘ</p>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground font-light mb-8">
-              Book Your Consultation
+              Umów Swoją Konsultację
             </h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input
-                  placeholder="First Name"
+                  placeholder="Imię"
                   className="bg-secondary border-border focus:border-primary py-6"
                 />
                 <Input
-                  placeholder="Last Name"
+                  placeholder="Nazwisko"
                   className="bg-secondary border-border focus:border-primary py-6"
                 />
               </div>
               <Input
                 type="email"
-                placeholder="Email Address"
+                placeholder="Adres Email"
                 className="bg-secondary border-border focus:border-primary py-6"
               />
               <Input
                 type="tel"
-                placeholder="Phone Number"
+                placeholder="Numer Telefonu"
                 className="bg-secondary border-border focus:border-primary py-6"
               />
               <Textarea
-                placeholder="Tell us about your skin concerns..."
+                placeholder="Powiedz nam o swoich problemach ze skórą..."
                 rows={5}
                 className="bg-secondary border-border focus:border-primary resize-none"
               />
               <Button size="lg" className="w-full py-6 tracking-wider">
-                REQUEST APPOINTMENT
+                UMÓW WIZYTĘ
               </Button>
             </form>
           </div>
@@ -62,16 +62,16 @@ const Contact = () => {
               infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">VISIT US</p>
+            <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">ODWIEDŹ NAS</p>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground font-light mb-8">
-              Our Location
+              Nasza Lokalizacja
             </h2>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">Address</p>
+                  <p className="font-medium text-foreground">Adres</p>
                   <p className="text-muted-foreground font-light">
                     123 Beauty Lane, Suite 400
                     <br />
@@ -83,7 +83,7 @@ const Contact = () => {
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">Phone</p>
+                  <p className="font-medium text-foreground">Telefon</p>
                   <a
                     href="tel:+13105551234"
                     className="text-muted-foreground font-light hover:text-primary transition-colors"
@@ -109,13 +109,13 @@ const Contact = () => {
               <div className="flex items-start gap-4">
                 <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">Hours</p>
+                  <p className="font-medium text-foreground">Godziny</p>
                   <p className="text-muted-foreground font-light">
-                    Mon - Fri: 9:00 AM - 7:00 PM
+                    Pon - Pt: 9:00 - 19:00
                     <br />
-                    Sat: 10:00 AM - 5:00 PM
+                    Sob: 10:00 - 17:00
                     <br />
-                    Sun: Closed
+                    Niedz: Zamknięte
                   </p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="mt-10 pt-8 border-t border-border">
-              <p className="text-sm tracking-wide text-muted-foreground mb-4">FOLLOW US</p>
+              <p className="text-sm tracking-wide text-muted-foreground mb-4">ŚLEDŹ NAS</p>
               <div className="flex gap-4">
                 <a
                   href="#"

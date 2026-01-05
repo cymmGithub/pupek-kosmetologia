@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="font-serif text-2xl tracking-wider mb-4">LUMIÈRE</h3>
             <p className="text-primary-foreground/70 font-light text-sm leading-relaxed">
-              Where science meets natural beauty. Experience transformative skincare at our luxury clinic.
+              Gdzie nauka spotyka naturalną urodę. Doświadcz transformacyjnej pielęgnacji skóry w naszej luksusowej klinice.
             </p>
             <div className="flex gap-3 mt-6">
               <a
@@ -33,9 +33,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">QUICK LINKS</h4>
+            <h4 className="font-sans text-sm tracking-wider mb-6">SZYBKIE LINKI</h4>
             <ul className="space-y-3">
-              {['Home', 'Services', 'About Us', 'Contact'].map((link) => (
+              {['Strona główna', 'Usługi', 'O nas', 'Kontakt'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(' ', '-')}`}
@@ -50,9 +50,9 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">TREATMENTS</h4>
+            <h4 className="font-sans text-sm tracking-wider mb-6">ZABIEGI</h4>
             <ul className="space-y-3">
-              {['Facial Rejuvenation', 'Hydrafacial', 'Laser Therapy', 'Anti-Aging Care', 'Microneedling'].map(
+              {['Odmładzanie twarzy', 'Hydrafacial', 'Terapia laserowa', 'Pielęgnacja anti-aging', 'Mikronakłuwanie'].map(
                 (service) => (
                   <li key={service}>
                     <a
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">CONTACT</h4>
+            <h4 className="font-sans text-sm tracking-wider mb-6">KONTAKT</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0 text-primary-foreground/50" />
@@ -104,20 +104,20 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm font-light">
-            © {currentYear} Lumière Skin Clinic. All rights reserved.
+            © {currentYear} Lumière Klinika Skóry. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex gap-6">
             <a
               href="#"
               className="text-primary-foreground/50 hover:text-primary-foreground text-sm font-light transition-colors"
             >
-              Privacy Policy
+              Polityka prywatności
             </a>
             <a
               href="#"
               className="text-primary-foreground/50 hover:text-primary-foreground text-sm font-light transition-colors"
             >
-              Terms of Service
+              Regulamin
             </a>
           </div>
         </div>

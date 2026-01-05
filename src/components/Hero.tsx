@@ -45,7 +45,7 @@ const Hero = () => {
           }`}
         >
           <p className="font-sans text-sm md:text-base tracking-[0.3em] text-primary-foreground/80 mb-4">
-            SKIN BEAUTY CLINIC
+            KLINIKA URODY SKÓRY
           </p>
         </div>
 
@@ -54,8 +54,8 @@ const Hero = () => {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Where Science Meets
-          <span className="block italic mt-2">Natural Beauty</span>
+          Gdzie Nauka Spotyka
+          <span className="block italic mt-2">Naturalną Urodę</span>
         </h1>
 
         <p
@@ -63,7 +63,7 @@ const Hero = () => {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Experience transformative skincare treatments tailored to reveal your skin's natural radiance.
+          Doświadcz transformacyjnych zabiegów pielęgnacyjnych dopasowanych do potrzeb Twojej skóry.
         </p>
 
         <div
@@ -76,7 +76,7 @@ const Hero = () => {
             size="lg"
             className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground px-8 py-6 text-sm tracking-wider"
           >
-            BOOK CONSULTATION
+            UMÓW KONSULTACJĘ
           </Button>
           <Button
             variant="ghost"
@@ -84,7 +84,7 @@ const Hero = () => {
             className="text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-sm tracking-wider"
             onClick={scrollToServices}
           >
-            EXPLORE TREATMENTS
+            POZNAJ ZABIEGI
           </Button>
         </div>
       </div>
@@ -98,9 +98,9 @@ const Hero = () => {
         <button
           onClick={scrollToServices}
           className="flex flex-col items-center text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-          aria-label="Scroll down"
+          aria-label="Przewiń w dół"
         >
-          <span className="text-xs tracking-widest mb-2">SCROLL</span>
+          <span className="text-xs tracking-widest mb-2">PRZEWIŃ</span>
           <ChevronDown className="h-5 w-5 animate-bounce" />
         </button>
       </div>

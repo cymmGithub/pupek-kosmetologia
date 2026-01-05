@@ -5,39 +5,39 @@ import { Button } from '@/components/ui/button';
 const services = [
   {
     icon: Sparkles,
-    title: 'Facial Rejuvenation',
-    description: 'Advanced treatments to restore youthful radiance and reduce signs of aging.',
-    price: 'From $150',
+    title: 'Odmładzanie twarzy',
+    description: 'Zaawansowane zabiegi przywracające młodzieńczy blask i redukujące oznaki starzenia.',
+    price: 'Od $150',
   },
   {
     icon: Droplets,
     title: 'Hydrafacial',
-    description: 'Deep cleansing and hydration for instantly glowing, healthier-looking skin.',
-    price: 'From $180',
+    description: 'Głębokie oczyszczanie i nawilżanie dla natychmiastowo promieniującej, zdrowiej wyglądającej skóry.',
+    price: 'Od $180',
   },
   {
     icon: Sun,
-    title: 'Laser Therapy',
-    description: 'Precision treatments for skin resurfacing, pigmentation, and texture improvement.',
-    price: 'From $250',
+    title: 'Terapia laserowa',
+    description: 'Precyzyjne zabiegi do resurfacingu skóry, pigmentacji i poprawy tekstury.',
+    price: 'Od $250',
   },
   {
     icon: Heart,
-    title: 'Anti-Aging Care',
-    description: 'Comprehensive programs combining the latest in anti-aging technology.',
-    price: 'From $200',
+    title: 'Pielęgnacja anti-aging',
+    description: 'Kompleksowe programy łączące najnowsze technologie przeciwstarzeniowe.',
+    price: 'Od $200',
   },
   {
     icon: Leaf,
-    title: 'Organic Facials',
-    description: 'Natural, plant-based treatments for sensitive and eco-conscious clients.',
-    price: 'From $120',
+    title: 'Zabiegi organiczne',
+    description: 'Naturalne, roślinne zabiegi dla klientów z wrażliwą skórą i świadomych ekologicznie.',
+    price: 'Od $120',
   },
   {
     icon: Zap,
-    title: 'Microneedling',
-    description: 'Stimulate collagen production for firmer, smoother, more youthful skin.',
-    price: 'From $220',
+    title: 'Mikronakłuwanie',
+    description: 'Stymuluje produkcję kolagenu dla jędrniejszej, gładszej, młodziej wyglądającej skóry.',
+    price: 'Od $220',
   },
 ];
 
@@ -55,12 +55,12 @@ const Services = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">OUR EXPERTISE</p>
+          <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">NASZA EKSPERTYZA</p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light">
-            Signature Treatments
+            Zabiegi Firmowe
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto font-light">
-            Each treatment is carefully curated to address your unique skin concerns with the latest technology and techniques.
+            Każdy zabieg jest starannie dobrany, aby odpowiedzieć na Twoje unikalne potrzeby skóry przy użyciu najnowszych technologii i technik.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ const Services = () => {
               <div className="flex items-center justify-between pt-4 border-t border-border">
                 <span className="text-primary font-medium text-sm">{service.price}</span>
                 <button className="text-sm text-foreground link-underline hover:text-primary transition-colors">
-                  Learn More
+                  Dowiedz się więcej
                 </button>
               </div>
             </article>
@@ -97,7 +97,7 @@ const Services = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Button variant="outline" size="lg" className="px-10 py-6 tracking-wider">
-            VIEW ALL TREATMENTS
+            ZOBACZ WSZYSTKIE ZABIEGI
           </Button>
         </div>
       </div>
