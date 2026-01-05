@@ -64,7 +64,7 @@ const Hero = () => {
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 				>
-					Piękno zaczyna się
+					Piekno zaczyna sie
 					<span className='block italic mt-2'>Od Ciebie</span>
 				</h1>
 

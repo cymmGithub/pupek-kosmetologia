@@ -35,7 +35,7 @@ const Footer = () => {
           <div>
             <h4 className="font-sans text-sm tracking-wider mb-6">SZYBKIE LINKI</h4>
             <ul className="space-y-3">
-              {['Strona główna', 'Usługi', 'O nas', 'Kontakt'].map((link) => (
+              {['Strona główna', 'Zabiegi', 'O nas', 'Kontakt'].map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(' ', '-')}`}

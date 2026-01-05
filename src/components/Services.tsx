@@ -1,43 +1,52 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Sparkles, Droplets, Sun, Heart, Leaf, Zap } from 'lucide-react';
+import { Sparkles, Droplets, Sun, Heart, Leaf, LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  price: string;
+  priceNote?: string;
+}
+
+const services: Service[] = [
   {
     icon: Sparkles,
-    title: 'Odmładzanie twarzy',
-    description: 'Zaawansowane zabiegi przywracające młodzieńczy blask i redukujące oznaki starzenia.',
-    price: 'Od $150',
+    title: 'Konsultacja kosmetologiczna',
+    description: 'Analiza skóry za pomocą urządzenia Observ520x + wywiad + zalecenia pielęgnacyjne',
+    price: '250zł (1-1,5h)',
+    priceNote: '*z zabiegiem 2-3h 500zł',
   },
   {
     icon: Droplets,
-    title: 'Hydrafacial',
-    description: 'Głębokie oczyszczanie i nawilżanie dla natychmiastowo promieniującej, zdrowiej wyglądającej skóry.',
-    price: 'Od $180',
+    title: 'Terapia trądzikowa',
+    description: 'Klasyczna terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.',
+    price: '250-350zł (ok. 1h)',
   },
   {
     icon: Sun,
-    title: 'Terapia laserowa',
-    description: 'Precyzyjne zabiegi do resurfacingu skóry, pigmentacji i poprawy tekstury.',
-    price: 'Od $250',
+    title: 'Terapia przebarwień',
+    description: 'Specjalistyczny zabieg wyrównujący koloryt i redukujący przebarwienia.',
+    price: '300-350zł (ok. 1h)',
   },
   {
     icon: Heart,
-    title: 'Pielęgnacja anti-aging',
-    description: 'Kompleksowe programy łączące najnowsze technologie przeciwstarzeniowe.',
-    price: 'Od $200',
+    title: 'Terapia anti aging',
+    description: 'Zaawansowana terapia przeciwstarzeniowa przywracająca młodzieńczy wygląd.',
+    price: '300-350zł (ok. 1h)',
   },
   {
     icon: Leaf,
-    title: 'Zabiegi organiczne',
-    description: 'Naturalne, roślinne zabiegi dla klientów z wrażliwą skórą i świadomych ekologicznie.',
-    price: 'Od $120',
+    title: 'Zabieg nawilżający/regenerujący',
+    description: 'Głębokie nawilżenie i regeneracja skóry dla przywrócenia jej naturalnej równowagi.',
+    price: '250-350zł (ok. 1h)',
   },
   {
-    icon: Zap,
-    title: 'Mikronakłuwanie',
-    description: 'Stymuluje produkcję kolagenu dla jędrniejszej, gładszej, młodziej wyglądającej skóry.',
-    price: 'Od $220',
+    icon: Sparkles,
+    title: 'Zabieg relaksacyjny',
+    description: 'Relaksujący zabieg łączący pielęgnację skóry z chwilą odprężenia i spokoju.',
+    price: '350-400zł (ok. 1,5h)',
   },
 ];
 
@@ -57,7 +66,7 @@ const Services = () => {
         >
           <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">NASZA EKSPERTYZA</p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light">
-            Zabiegi Firmowe
+            Zabiegi
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto font-light">
             Każdy zabieg jest starannie dobrany, aby odpowiedzieć na Twoje unikalne potrzeby skóry przy użyciu najnowszych technologii i technik.
@@ -84,11 +93,18 @@ const Services = () => {
               <p className="text-muted-foreground font-light text-sm leading-relaxed mb-4">
                 {service.description}
               </p>
-              <div className="flex items-center justify-between pt-4 border-t border-border">
-                <span className="text-primary font-medium text-sm">{service.price}</span>
-                <button className="text-sm text-foreground link-underline hover:text-primary transition-colors">
-                  Dowiedz się więcej
-                </button>
+              <div className="pt-4 border-t border-border">
+                <div className="flex items-start justify-between">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-primary font-medium text-sm">{service.price}</span>
+                    {service.priceNote && (
+                      <span className="text-muted-foreground text-xs italic">{service.priceNote}</span>
+                    )}
+                  </div>
+                  <button className="text-sm text-foreground link-underline hover:text-primary transition-colors self-start">
+                    Dowiedz się więcej
+                  </button>
+                </div>
               </div>
             </article>
           ))}
