@@ -41,12 +41,12 @@ const stages = [
 ];
 
 const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number }) => {
-  const stageRef = useScrollReveal();
+  const { ref: stageRef } = useScrollReveal();
   const isEven = index % 2 === 0;
 
   return (
     <div
-      ref={stageRef.ref}
+      ref={stageRef}
       className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center`}
     >
       {/* Image */}
@@ -85,12 +85,12 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
 };
 
 const Stages = () => {
-  const titleRef = useScrollReveal();
+  const { ref: titleRef } = useScrollReveal();
 
   return (
     <section id="stages" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div ref={titleRef.ref} className="text-center mb-16 md:mb-20">
+        <div ref={titleRef} className="text-center mb-16 md:mb-20">
           <span className="text-primary/80 tracking-[0.3em] uppercase text-sm font-medium">
             Your Journey
           </span>
