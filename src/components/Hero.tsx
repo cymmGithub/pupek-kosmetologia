@@ -33,13 +33,12 @@ const Hero = () => {
 				<video
 					autoPlay
 					muted
-					loop
 					playsInline
+					preload='auto'
 					className='w-full h-full object-cover'
-					poster='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80'
 				>
 					<source
-						src='https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=174'
+						src='/6153801-hd_1366_720_30fps.mp4'
 						type='video/mp4'
 					/>
 				</video>
