@@ -51,7 +51,7 @@ const Header = () => {
           >
             <img
               src="/logo-v1.png"
-              alt="LUMIÈRE"
+              alt="Pupek Kosmetologia"
               className={`w-auto transition-all duration-500 ${
                 isScrolled ? 'h-16 invert' : 'h-16 md:h-36'
               }`}

@@ -22,7 +22,7 @@ const testimonials = [
     name: 'Amanda Roberts',
     treatment: 'Anti-Aging Care',
     quote:
-      'After trying many clinics, I finally found my home at Lumière. The personalized approach and attention to detail is unmatched.',
+      'After trying many clinics, I finally found my home at Pupek Kosmetologia. The personalized approach and attention to detail is unmatched.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
   },

@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="font-serif text-2xl tracking-wider mb-4">LUMIÈRE</h3>
+            <h3 className="font-serif text-2xl tracking-wider mb-4">Pupek Kosmetologia</h3>
             <p className="text-primary-foreground/70 font-light text-sm leading-relaxed">
-              Gdzie nauka spotyka naturalną urodę. Doświadcz transformacyjnej pielęgnacji skóry w naszej luksusowej klinice.
+              Odkryj zabiegi skrojone na miarę Twoich potrzeb i poczuj się wyjątkowo we własnej skórze.
             </p>
             <div className="flex gap-3 mt-6">
               <a
@@ -85,16 +85,16 @@ const Footer = () => {
                   href="tel:+13105551234"
                   className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
                 >
-                  +1 (310) 555-1234
+                  +48 515-157-681
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0 text-primary-foreground/50" />
                 <a
-                  href="mailto:hello@lumiere.com"
+                  href="mailto:pupek.kosmetologia@gmail.com"
                   className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
                 >
-                  hello@lumiere.com
+                  pupek.kosmetologia@gmail.com
                 </a>
               </li>
             </ul>
@@ -104,7 +104,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm font-light">
-            © {currentYear} Lumière Klinika Skóry. Wszelkie prawa zastrzeżone.
+            © {currentYear} Pupek Kosmetologia Klinika Skóry. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex gap-6">
             <a

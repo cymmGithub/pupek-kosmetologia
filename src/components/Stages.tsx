@@ -42,13 +42,15 @@ const stages = [
 ];
 
 const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number }) => {
-  const { ref: stageRef } = useScrollReveal();
+  const { ref: stageRef, isVisible } = useScrollReveal();
   const isEven = index % 2 === 0;
 
   return (
     <div
       ref={stageRef}
-      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center`}
+      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center transition-all duration-1000 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
     >
       {/* Image */}
       <div className="w-full lg:w-1/2">

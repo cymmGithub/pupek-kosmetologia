@@ -88,7 +88,7 @@ const Contact = () => {
                     href="tel:+13105551234"
                     className="text-muted-foreground font-light hover:text-primary transition-colors"
                   >
-                    +1 (310) 555-1234
+                    +48 515-157-681
                   </a>
                 </div>
               </div>
@@ -98,10 +98,10 @@ const Contact = () => {
                 <div>
                   <p className="font-medium text-foreground">Email</p>
                   <a
-                    href="mailto:hello@lumiere.com"
+                    href="mailto:pupek.kosmetologia@gmail.com"
                     className="text-muted-foreground font-light hover:text-primary transition-colors"
                   >
-                    hello@lumiere.com
+                    pupek.kosmetologia@gmail.com
                   </a>
                 </div>
               </div>
