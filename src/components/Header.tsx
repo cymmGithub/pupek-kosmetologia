@@ -39,6 +39,17 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
+        {/* Title */}
+        <div className={`flex justify-center pt-4 md:pt-0 mb-[-50px] md:mb-[-30px] transition-all duration-500 ${
+          isScrolled ? 'lg:opacity-0 lg:invisible' : 'opacity-100 visible'
+        }`}>
+          <h1 className={`text-lg md:text-3xl transition-colors duration-500 ${
+            isScrolled ? 'text-foreground' : 'text-primary-foreground'
+          }`}>
+            PUPEK KOSMETOLOGIA
+          </h1>
+        </div>
+
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
@@ -50,7 +61,7 @@ const Header = () => {
             className="flex items-center"
           >
             <img
-              src="/logo-v1.png"
+              src="/logo-no-text.png"
               alt="Pupek Kosmetologia"
               className={`w-auto transition-all duration-500 ${
                 isScrolled ? 'h-16 invert' : 'h-16 md:h-36'

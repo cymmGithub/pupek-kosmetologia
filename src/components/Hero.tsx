@@ -49,16 +49,6 @@ const Hero = () => {
 
 			{/* Content */}
 			<div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
-				<div
-					className={`transition-all duration-1000 delay-300 ${
-						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-					}`}
-				>
-					<p className='font-sans text-sm md:text-base tracking-[0.3em] text-primary-foreground/80 mb-4'>
-						ŚWIADOMA PIELENGNACJA
-					</p>
-				</div>
-
 				<h1
 					className={`font-milven text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-light leading-tight max-w-4xl transition-all duration-1000 delay-500 drop-shadow-lg ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
