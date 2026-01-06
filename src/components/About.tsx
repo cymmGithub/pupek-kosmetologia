@@ -28,9 +28,7 @@ const About = () => {
 								: "opacity-0 translate-y-8"
 						}`}
 					>
-						<p className='font-sans text-sm tracking-[0.3em] text-primary-foreground/70 mb-4'>
-							MOJA FILOZOFIA
-						</p>
+
 						<h2 className='font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-light italic leading-tight'>
 							Od Kobiety, dla Kobiet
 						</h2>

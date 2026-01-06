@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="font-serif text-2xl tracking-wider mb-4">Pupek Kosmetologia</h3>
+            <h3 className="font-milven text-2xl tracking-wider mb-4">Pupek Kosmetologia</h3>
             <p className="text-primary-foreground/70 font-light text-sm leading-relaxed">
               Odkryj zabiegi skrojone na miarę Twoich potrzeb i poczuj się wyjątkowo we własnej skórze.
             </p>
