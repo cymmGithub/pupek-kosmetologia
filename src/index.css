@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Milven';
-  src: url('/fonts/Milven-Regular.otf') format('opentype');
+  font-family: 'The Seasons Regular';
+  src: url('/fonts/the-seasons-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -58,6 +58,7 @@
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Montserrat', sans-serif;
     --font-milven: 'Milven', serif;
+    --font-the-seasons-regular: 'The Seasons Regular', serif;
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
@@ -130,7 +131,7 @@
   }
 
   h1 {
-    font-family: var(--font-milven);
+    font-family: var(--font-the-seasons-regular);
   }
 
   h2, h3, h4, h5, h6 {
@@ -149,6 +150,10 @@
 
   .font-milven {
     font-family: var(--font-milven);
+  }
+
+  .font-the-seasons-regular {
+    font-family: var(--font-the-seasons-regular);
   }
 }
 

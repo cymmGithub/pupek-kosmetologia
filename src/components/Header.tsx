@@ -46,7 +46,7 @@ const Header = () => {
           <h1 className={`text-lg md:text-3xl transition-colors duration-500 ${
             isScrolled ? 'text-foreground' : 'text-primary-foreground'
           }`}>
-            PUPEK KOSMETOLOGIA
+            pupek kosmetologia
           </h1>
         </div>
 

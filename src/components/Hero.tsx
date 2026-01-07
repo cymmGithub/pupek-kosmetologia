@@ -49,12 +49,12 @@ const Hero = () => {
 			{/* Content */}
 			<div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
 				<h1
-					className={`font-milven text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-light leading-tight max-w-4xl transition-all duration-1000 delay-500 drop-shadow-lg ${
+					className={`font-the-seasons-regular text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-light leading-tight max-w-4xl transition-all duration-1000 delay-500 drop-shadow-lg ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 				>
-					Piekno zaczyna sie
-					<span className='block italic mt-2'>Od Ciebie</span>
+					Zabiegi skrojone
+					<span className='block italic mt-2'>dla Twoich potrzeb</span>
 				</h1>
 
 				<p

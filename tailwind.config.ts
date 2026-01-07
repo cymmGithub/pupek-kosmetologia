@@ -22,6 +22,7 @@ export default {
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
         milven: ['Milven', 'serif'],
+        "the-seasons-regular": ['The Seasons Regular', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
