@@ -50,6 +50,14 @@ const Hero = () => {
 					<span className='block italic mt-2'>swojej skóry</span>
 				</h1>
 
+				<p
+					className={`font-sans text-primary-foreground/80 mt-6 max-w-xl text-base md:text-lg font-light transition-all duration-1000 delay-700 ${
+						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+					}`}
+				>
+					Rozpocznij świadomą zmianę i odbierz indywidualny plan działania, stworzony na podstawie diagnostyki Twojej skóry.
+				</p>
+
 				<div
 					className={`mt-10 transition-all duration-1000 delay-900 ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
