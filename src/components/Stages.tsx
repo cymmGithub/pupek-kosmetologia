@@ -54,7 +54,7 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
     >
       {/* Image */}
       <div className="w-full lg:w-1/2">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <img
             src={stage.image}
             alt={stage.title}
