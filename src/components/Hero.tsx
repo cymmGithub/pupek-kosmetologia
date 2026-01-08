@@ -41,16 +41,14 @@ const Hero = () => {
 
 			{/* Content */}
 			<div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
-				<h1
-					className={`font-the-seasons-regular text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-light leading-tight max-w-4xl transition-all duration-1000 delay-500 drop-shadow-lg ${
+				<img
+					src="/hero-text.png"
+					alt="Zadbaj o zdrowie swojej skóry"
+					className={`max-w-xl w-full px-4 transition-all duration-1000 delay-500 drop-shadow-lg ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
-				>
-					Zadbaj o zdrowie
-					<span className='block italic mt-2'>swojej skóry</span>
-				</h1>
-
-				<p
+				/>
+								<p
 					className={`font-sans text-primary-foreground/80 mt-6 max-w-xl text-base md:text-lg font-light transition-all duration-1000 delay-700 ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
