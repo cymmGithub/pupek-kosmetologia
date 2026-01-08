@@ -22,7 +22,7 @@ const services: Service[] = [
   {
     icon: Droplets,
     title: 'Terapia trądzikowa',
-    description: 'Klasyczna terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.',
+    description: 'Terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.',
     price: '250-350zł (ok. 1h)',
   },
   {
@@ -34,7 +34,7 @@ const services: Service[] = [
   {
     icon: Heart,
     title: 'Terapia anti aging',
-    description: 'Zaawansowana terapia przeciwstarzeniowa przywracająca młodzieńczy wygląd.',
+    description: 'Zaawansowana terapia przeciwstarzeniowa redukująca widoczność zmarszczek.',
     price: '300-350zł (ok. 1h)',
   },
   {
@@ -79,12 +79,11 @@ const Services = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <p className="font-sans text-sm tracking-[0.3em] text-primary mb-4">NASZA EKSPERTYZA</p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light">
             Zabiegi
           </h2>
-          <p className="mt-6 text-muted-foreground max-w-2xl mx-auto font-light">
-            Każdy zabieg jest starannie dobrany, aby odpowiedzieć na Twoje unikalne potrzeby skóry przy użyciu najnowszych technologii i technik.
+          <p className="mt-6 text-muted-foreground max-w-3xl mx-auto font-light">
+            Każdy zabieg jest starannie dobrany, aby odpowiedzieć na aktualne potrzeby Twojej skóry.
           </p>
         </div>
 
@@ -113,7 +112,7 @@ const Services = () => {
                   <div className="flex flex-col gap-1">
                     <span className="text-primary font-medium text-sm">{service.price}</span>
                     {service.priceNote && (
-                      <span className="text-muted-foreground text-xs italic">{service.priceNote}</span>
+                      <span className="text-muted-foreground text-xs font-bold italic">{service.priceNote}</span>
                     )}
                   </div>
                   <button className="text-sm text-foreground link-underline hover:text-primary transition-colors self-start">

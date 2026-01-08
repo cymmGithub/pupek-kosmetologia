@@ -9,19 +9,19 @@ import willowBg from '/willow.png';
 const stages = [
   {
     number: '01',
-    title: 'Przed Twoją Wizytą',
+    title: 'Przed Wizytą Stacjonarną',
     subtitle: 'Faza Przygotowania',
     icon: FileText,
     image: stagesBeforeVisit,
-    description: 'Po zarezerwowaniu konsultacji wysyłamy Ci szczegółowy przewodnik PDF e-mailem z instrukcjami przygotowania. Obejmuje to zrobienie zdjęć Twojej obecnej pielęgnacji skóry, przypomnienie poprzednich zabiegów i właściwe przygotowanie skóry przed konsultacją.',
+    description: 'Po zarezerwowaniu konsultacji wysyłam Ci szczegółowy przewodnik PDF e-mailem z instrukcjami przygotowania. Obejmuje on między innymi zrobienie zdjęć Twojej obecnej pielęgnacji, przypomnienie poprzednich zabiegów i właściwe przygotowanie skóry przed konsultacją.',
   },
   {
     number: '02',
     title: 'Konsultacja Osobista',
-    subtitle: 'Trójczęściowa Ocena',
+    subtitle: 'Trzyczęściowa Ocena',
     icon: Stethoscope,
     image: stagesConsultation,
-    description: 'Twoja konsultacja składa się z trzech części: kompleksowego wywiadu kosmetycznego dotyczącego stanu i zdrowia Twojej skóry, zaawansowanej diagnostyki skóry przy użyciu urządzenia Observ 520x z 8 modułami diagnostycznymi oraz praktycznej oceny palpacyjnej jakości, gęstości i jędrności skóry.',
+    description: 'Twoja konsultacja składa się z trzech części: kompleksowego wywiadu kosmetologicznego dotyczącego ogólnego stanu zdrowia i skóry, zaawansowanej diagnostyki skóry przy użyciu urządzenia Observ 520x z 8 modułami diagnostycznymi oraz praktycznej palpacyjnej oceny jakości, gęstości i jędrności skóry.',
   },
   {
     number: '03',
@@ -29,7 +29,7 @@ const stages = [
     subtitle: 'Spersonalizowany Raport',
     icon: Mail,
     image: stagesSummary,
-    description: 'W ciągu tygodnia otrzymujesz szczegółową wiadomość e-mail zawierającą: zdjęcia z Observ 520x z opisami, podsumowanie wywiadu z zaleceniami pielęgnacyjnymi, spersonalizowaną rutynę pielęgnacji twarzy, ciała i włosów, oraz uniwersalne wskazówki pielęgnacyjne dla Twojego typu skóry.',
+    description: 'W ciągu tygodnia otrzymasz szczegółową wiadomość e-mail zawierającą: zinterpretowane przeze mnie zdjęcia z urządzenia Observ 520x, podsumowanie wywiadu, zalecenia pielęgnacyjne ciała i włosów, oraz uniwersalne wskazówki pielęgnacyjne dla Twojego typu skóry.',
   },
   {
     number: '04',
@@ -37,7 +37,7 @@ const stages = [
     subtitle: 'Spersonalizowana Opieka',
     icon: Sparkles,
     image: stagesTreatments,
-    description: 'Po konsultacji (lub po niezbędnym okresie oczekiwania w przypadku wrażliwej skóry) rozpoczynamy zabiegi dostosowane specjalnie do potrzeb Twojej skóry. Sesje są planowane co 3-4 tygodnie dla optymalnych rezultatów.',
+    description: 'Bezpośrednio po konsultacji (lub po niezbędnym okresie od wprowadzenia odpowiedniej pielęgnacji domowej) rozpoczynamy zabiegi dostosowane do potrzeb Twojej skóry. Zabiegi wykonywane są co 3-4 tygodnie.',
   },
 ];
 
@@ -115,7 +115,7 @@ const Stages = () => {
             Etapy Współpracy
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Ustrukturyzowane podejście do osiągania celów dotyczących Twojej skóry, od pierwszej konsultacji do bieżących zabiegów.
+            Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efketów terapii oraz wykluczenie przeciwskazań zabiegowych.
           </p>
         </div>
 

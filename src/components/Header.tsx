@@ -30,6 +30,13 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollToContact = () => {
+    const element = document.querySelector("#contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -58,7 +65,7 @@ const Header = () => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="flex items-center"
+            className="flex items-center md:w-[239px]"
           >
             <img
               src="/logo-no-text.png"
@@ -92,15 +99,18 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:+1234567890"
-              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                isScrolled ? 'text-foreground' : 'text-primary-foreground'
+            <Button
+              variant='outline'
+              size='lg'
+              className={`border-2 px-8 py-6 text-sm tracking-wider transition-all ${
+                isScrolled
+                  ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                  : 'bg-accent/20 border-primary-foreground/20 text-primary-foreground hover:bg-accent hover:text-foreground'
               }`}
+              onClick={scrollToContact}
             >
-              <Phone className="h-4 w-4" />
-              <span>+48 515-157-681</span>
-            </a>
+              UMÓW KONSULTACJĘ
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}

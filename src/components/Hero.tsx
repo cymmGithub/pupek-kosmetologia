@@ -16,13 +16,6 @@ const Hero = () => {
 		}
 	};
 
-	const scrollToContact = () => {
-		const element = document.querySelector("#contact");
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
-		}
-	};
-
 	return (
 		<section
 			id='home'
@@ -53,36 +46,19 @@ const Hero = () => {
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 				>
-					Zabiegi skrojone
-					<span className='block italic mt-2'>dla Twoich potrzeb</span>
+					Zadbaj o zdrowie
+					<span className='block italic mt-2'>swojej skóry</span>
 				</h1>
 
-				<p
-					className={`font-sans text-primary-foreground/80 mt-6 max-w-xl text-base md:text-lg font-light transition-all duration-1000 delay-700 ${
-						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-					}`}
-				>
-					Odkryj zabiegi skrojone na miarę Twoich potrzeb i poczuj się wyjątkowo
-					we własnej skórze.
-				</p>
-
 				<div
-					className={`mt-10 flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-900 ${
+					className={`mt-10 transition-all duration-1000 delay-900 ${
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 				>
 					<Button
 						variant='outline'
 						size='lg'
-						className='bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground px-8 py-6 text-sm tracking-wider'
-						onClick={scrollToContact}
-					>
-						UMÓW KONSULTACJĘ
-					</Button>
-					<Button
-						variant='ghost'
-						size='lg'
-						className='text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-sm tracking-wider'
+						className='bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground'
 						onClick={scrollToServices}
 					>
 						POZNAJ ZABIEGI
