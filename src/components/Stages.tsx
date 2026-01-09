@@ -49,37 +49,55 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
     <div
       ref={stageRef}
       className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center transition-all duration-1000 ease-out ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
     >
       {/* Image */}
       <div className="w-full lg:w-1/2">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-          <img
-            src={stage.image}
-            alt={stage.title}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-          />
-          <div className="absolute top-6 left-6 bg-primary/90 text-primary-foreground px-4 py-2 rounded-full font-serif text-2xl">
-            {stage.number}
+        <div className="relative aspect-[4/3] group">
+          {/* Decorative glow on hover */}
+          <div className="absolute -inset-3 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
+
+          <div className="relative overflow-hidden rounded-xl shadow-xl">
+            <img
+              src={stage.image}
+              alt={stage.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            {/* Subtle overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+            {/* Enhanced number badge */}
+            <div className="absolute top-6 left-6 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-full font-serif text-2xl shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl">
+              {stage.number}
+            </div>
           </div>
+
         </div>
       </div>
 
       {/* Content */}
-      <div className="w-full lg:w-1/2 space-y-4">
+      <div className="w-full lg:w-1/2 space-y-5">
+        {/* Icon and subtitle */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center">
             <stage.icon className="w-6 h-6 text-primary" />
           </div>
-          <span className="text-primary/80 tracking-wider uppercase text-sm font-medium">
+          <span className="text-primary/70 tracking-[0.25em] uppercase text-xs font-medium">
             {stage.subtitle}
           </span>
         </div>
-        <h3 className="font-serif text-2xl md:text-4xl text-foreground">
+
+        {/* Title with enhanced typography */}
+        <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground font-light leading-tight">
           {stage.title}
         </h3>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+
+        {/* Decorative line accent */}
+        <div className="w-16 h-px bg-gradient-to-r from-primary/50 to-transparent" />
+
+        {/* Description with better spacing */}
+        <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
           {stage.description}
         </p>
       </div>
@@ -88,38 +106,75 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
 };
 
 const Stages = () => {
-  const { ref: titleRef } = useScrollReveal();
+  const { ref: titleRef, isVisible: titleVisible } = useScrollReveal();
 
   return (
-    <section id="stages" className="py-20 md:py-32 bg-background relative overflow-hidden">
-      {/* Decorative Background */}
+    <section id="stages" className="relative py-24 md:py-32 bg-gradient-to-b from-background via-accent/5 to-background overflow-hidden">
+      {/* Atmospheric background elements */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/6 rounded-full blur-3xl animate-float-slow" />
+      <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-float-slower" />
+
+      {/* Grain texture overlay */}
+      <div className="absolute inset-0 bg-noise opacity-[0.015] mix-blend-overlay pointer-events-none" />
+
+      {/* Decorative willow backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <img
           src={willowBg}
           alt=""
-          className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.08] transform rotate-12"
+          className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.04] transform rotate-12"
         />
         <img
           src={willowBg}
           alt=""
-          className="absolute bottom-20 left-0 w-48 md:w-80 opacity-[0.06] transform -rotate-12 scale-x-[-1]"
+          className="absolute bottom-20 left-0 w-48 md:w-80 opacity-[0.03] transform -rotate-12 scale-x-[-1]"
         />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div ref={titleRef} className="text-center mb-16 md:mb-20">
-          <span className="text-primary/80 tracking-[0.3em] uppercase text-sm font-medium">
-            Rozpocznij zmianę
-          </span>
-          <h2 className="text-3xl md:text-5xl text-foreground mt-4 mb-6">
-            Etapy Współpracy
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efketów terapii oraz wykluczenie przeciwskazań zabiegowych.
-          </p>
+        {/* Enhanced title section */}
+        <div ref={titleRef} className="text-center mb-20 md:mb-28">
+          <div className="overflow-hidden">
+            <span
+              className={`inline-block text-primary/70 tracking-[0.3em] uppercase text-xs font-medium transition-all duration-1000 ${
+                titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
+              Rozpocznij zmianę
+            </span>
+          </div>
+
+          <div className="overflow-hidden mt-4 mb-6 pb-2">
+            <h2
+              className={`font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light transition-all duration-1000 delay-200 ${
+                titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
+            >
+              Etapy
+              <span className="block italic mt-1">Współpracy</span>
+            </h2>
+          </div>
+
+          {/* Decorative line */}
+          <div
+            className={`w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-8 transition-all duration-1000 delay-300 ${
+              titleVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+            }`}
+          />
+
+          <div className="overflow-hidden">
+            <p
+              className={`text-foreground/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed transition-all duration-1000 delay-500 ${
+                titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+            >
+              Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efketów terapii oraz wykluczenie przeciwskazań zabiegowych.
+            </p>
+          </div>
         </div>
 
-        <div className="space-y-16 md:space-y-24">
+        {/* Stage cards with increased spacing */}
+        <div className="space-y-20 md:space-y-32">
           {stages.map((stage, index) => (
             <StageCard key={stage.number} stage={stage} index={index} />
           ))}
