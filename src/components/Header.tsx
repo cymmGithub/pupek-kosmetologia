@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -12,6 +13,10 @@ const navLinks = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isOnHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,15 +27,43 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle scrolling to hash when navigating to home page with hash
+  useEffect(() => {
+    if (isOnHomePage && location.hash) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [isOnHomePage, location.hash]);
+
   const scrollToSection = (href: string) => {
+    setIsMobileMenuOpen(false);
+
+    // If we're not on the home page, navigate to home page with hash
+    if (!isOnHomePage) {
+      navigate(`/${href}`);
+      return;
+    }
+
+    // If we're on the home page, scroll to the section
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
   };
 
   const scrollToContact = () => {
+    // If we're not on the home page, navigate to home page with contact hash
+    if (!isOnHomePage) {
+      navigate('/#contact');
+      return;
+    }
+
+    // If we're on the home page, scroll to contact section
     const element = document.querySelector("#contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -60,12 +93,16 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#home"
+            href="/"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('#home');
+              if (isOnHomePage) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                navigate('/');
+              }
             }}
-            className="flex items-center md:w-[239px]"
+            className="flex items-center md:w-[239px] cursor-pointer"
           >
             <img
               src="/logo-no-text.png"
@@ -145,7 +182,7 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="default" className="mt-2">
+            <Button variant="default" className="mt-2" onClick={scrollToContact}>
               <Phone className="h-4 w-4 mr-2" />
               Umów wizytę
             </Button>
