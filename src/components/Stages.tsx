@@ -54,25 +54,19 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
     >
       {/* Image */}
       <div className="w-full lg:w-1/2">
-        <div className="relative aspect-[4/3] group">
-          {/* Decorative glow on hover */}
-          <div className="absolute -inset-3 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
-
+        <div className="relative aspect-[4/3]">
           <div className="relative overflow-hidden rounded-xl shadow-xl">
             <img
               src={stage.image}
               alt={stage.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover"
             />
-            {/* Subtle overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
             {/* Enhanced number badge */}
-            <div className="absolute top-6 left-6 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-full font-serif text-2xl shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl">
+            <div className="absolute top-6 left-6 bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground px-5 py-2.5 rounded-full font-serif text-2xl shadow-lg backdrop-blur-sm">
               {stage.number}
             </div>
           </div>
-
         </div>
       </div>
 

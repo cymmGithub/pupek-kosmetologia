@@ -81,7 +81,7 @@ const Services = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Enhanced Section Header */}
         <div ref={titleRef} className="text-center mb-20 md:mb-28">
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden mb-6 pb-2">
             <h2
               className={`font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light transition-all duration-1000 ${
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -100,7 +100,7 @@ const Services = () => {
 
           <div className="overflow-hidden">
             <p
-              className={`text-foreground/70 max-w-3xl mx-auto text-base md:text-lg font-light leading-relaxed transition-all duration-1000 delay-300 ${
+              className={`text-foreground/70 max-w-1xl mx-auto text-base md:text-lg font-light leading-relaxed transition-all duration-1000 delay-300 ${
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
