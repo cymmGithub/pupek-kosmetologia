@@ -1,6 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
   const { ref: textRef, isVisible: textVisible } = useScrollReveal();
@@ -76,21 +76,38 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Enhanced CTA button */}
+            {/* Important Notice - Emphasized */}
             <div
-              className={`transition-all duration-1000 delay-500 ${
-                textVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+              className={`transition-all duration-1000 delay-500 max-w-2xl ${
+                textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <Button
-                size="lg"
-                className="group relative px-8 py-6 tracking-[0.2em] text-sm overflow-hidden hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => window.location.href = 'mailto:pupek.kosmetologia@gmail.com'}
-              >
-                {/* Button shine effect */}
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="relative">UMÓW KONSULTACJĘ</span>
-              </Button>
+              <div className="relative border-2 border-primary/30 bg-gradient-to-br from-primary/5 via-primary/3 to-accent/5 rounded-xl p-6 md:p-8 overflow-hidden">
+                {/* Decorative corner accents */}
+                <div className="absolute top-0 left-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/8 rounded-full blur-3xl" />
+
+                {/* Content */}
+                <div className="relative">
+                  {/* Icon */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="p-2.5 rounded-lg bg-primary/15 flex-shrink-0">
+                      <AlertCircle className="w-6 h-6 text-primary" />
+                    </div>
+
+                    {/* Important message */}
+                    <div className="space-y-3 flex-1">
+                      <p className="text-foreground/80 text-sm md:text-base leading-relaxed font-normal">
+                        Konsultacja kosmetologiczna jest obowiązkowym elementem podjęcia naszej współpracy.
+                        Nie wykonuję zabiegów bez wcześniej odbytej konsultacji.
+                      </p>
+                      <p className="text-foreground/70 text-sm md:text-base leading-relaxed">
+                        Aby zapewnić bezpieczeństwo podczas terapii zabiegowych muszę zapoznać się z Twoją aktualną pielęgnacją, stylem życia oraz ogólnym stanem zdrowia. Podczas konsultacji omawiamy wszystkie te kwestie, dzięki czemu zwiększamy szanse na najlepsze rezultaty zabiegowe oraz minimalizujemy ryzyko ewentualnych powikłań.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
