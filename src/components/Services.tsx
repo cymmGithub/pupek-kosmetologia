@@ -1,6 +1,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Sparkles, Droplets, Sun, Heart, Leaf, LucideIcon } from 'lucide-react';
+import { Sparkles, Droplets, Sun, Heart, Leaf, LucideIcon, MessageCircleMore } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import willowBg from '/willow.png';
 
 interface Service {
@@ -9,18 +10,20 @@ interface Service {
   description: string;
   price: string;
   priceNote?: string;
+  slug?: string;
 }
 
 const services: Service[] = [
   {
-    icon: Sparkles,
+    icon: MessageCircleMore,
     title: 'Konsultacja kosmetologiczna',
     description: 'Analiza skóry za pomocą urządzenia Observ520x + wywiad + zalecenia pielęgnacyjne',
     price: '250zł (1-1,5h)',
     priceNote: '*z zabiegiem 2-3h 500zł',
+    slug: 'konsultacja-kosmetologiczna',
   },
   {
-    icon: Droplets,
+    icon: Leaf,
     title: 'Terapia trądzikowa',
     description: 'Terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.',
     price: '250-350zł (ok. 1h)',
@@ -38,7 +41,7 @@ const services: Service[] = [
     price: '300-350zł (ok. 1h)',
   },
   {
-    icon: Leaf,
+    icon: Droplets,
     title: 'Zabieg nawilżający/regenerujący',
     description: 'Głębokie nawilżenie i regeneracja skóry dla przywrócenia jej naturalnej równowagi.',
     price: '250-350zł (ok. 1h)',
@@ -150,15 +153,27 @@ const Services = () => {
                     <div className="flex flex-col gap-1">
                       <span className="text-primary font-medium text-sm md:text-base">{service.price}</span>
                       {service.priceNote && (
-                        <span className="text-foreground/50 text-xs italic">{service.priceNote}</span>
+                        <span className="font-bold text-foreground/50 text-xs italic">{service.priceNote}</span>
                       )}
                     </div>
-                    <button className="text-xs md:text-sm text-foreground/70 hover:text-primary transition-colors self-start flex items-center gap-1 group/btn">
-                      <span className="relative">
-                        Dowiedz się więcej
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover/btn:w-full" />
-                      </span>
-                    </button>
+                    {service.slug ? (
+                      <Link
+                        to={`/zabiegi/${service.slug}`}
+                        className="text-xs md:text-sm text-foreground/70 hover:text-primary transition-colors self-start flex items-center gap-1 group/btn"
+                      >
+                        <span className="relative">
+                          Dowiedz się więcej
+                          <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover/btn:w-full" />
+                        </span>
+                      </Link>
+                    ) : (
+                      <button className="text-xs md:text-sm text-foreground/70 hover:text-primary transition-colors self-start flex items-center gap-1 group/btn">
+                        <span className="relative">
+                          Dowiedz się więcej
+                          <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover/btn:w-full" />
+                        </span>
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
