@@ -160,7 +160,7 @@ const Stages = () => {
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Rozpocznij zmianę
+              Umów wizytę
             </span>
           </div>
 

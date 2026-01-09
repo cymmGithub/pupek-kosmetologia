@@ -118,7 +118,7 @@ const Hero = () => {
 						textShadow: '0 2px 10px rgba(0, 0, 0, 0.2)'
 					}}
 				>
-					Zacznij działać świadomie i wprowadzać zmiany,<br className='hidden sm:block' />
+					Zacznij działać świadomie i wprowadzać zmiany, <br className='hidden sm:block' />
 					które pozwolą Ci uzyskać realne rezultaty.
 				</p>
 

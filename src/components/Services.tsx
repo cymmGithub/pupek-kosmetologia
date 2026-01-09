@@ -27,6 +27,7 @@ const services: Service[] = [
     title: 'Terapia trądzikowa',
     description: 'Terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.',
     price: '250-350zł (ok. 1h)',
+    slug: 'terapia-tradzikowa',
   },
   {
     icon: Sun,
