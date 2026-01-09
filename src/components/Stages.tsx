@@ -188,7 +188,7 @@ const Stages = () => {
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efketów terapii oraz wykluczenie przeciwskazań zabiegowych.
+              Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efektów terapii oraz wykluczenie przeciwskazań zabiegowych.
             </p>
           </div>
         </div>
