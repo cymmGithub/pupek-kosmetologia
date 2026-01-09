@@ -53,7 +53,7 @@ const Hero = () => {
 						isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 					}`}
 				>
-					Rozpocznij świadomą zmianę i odbierz indywidualny plan działania, stworzony na podstawie diagnostyki Twojej skóry.
+					Zacznij działać świadomie i wprowadzać zmiany, które pozwolą Ci uzyskać realne rezultaty.
 				</p>
 
 				<div

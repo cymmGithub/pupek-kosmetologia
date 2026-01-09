@@ -48,7 +48,7 @@ const Voucher = () => {
 									Poszukujesz wyjątkowego prezentu dla bliskiej osoby?
 								</p>
 								<p className='text-primary-foreground/90 font-light text-lg leading-relaxed'>
-									Oferujemy vouchery o dowolnej wartości oraz na konkretne zabiegi. Każdy voucher jest elegancko zapakowany i gotowy do wręczenia. Skontaktuj się z nami, aby zamówić voucher lub uzyskać więcej informacji.
+									Oferuję vouchery o dowolnej wartości oraz na konkretne zabiegi. Każdy voucher jest elegancko zapakowany i gotowy do wręczenia. Skontaktuj się ze mną, aby zamówić voucher lub uzyskać więcej informacji.
 								</p>
 								<div className='pt-4'>
 									<a
