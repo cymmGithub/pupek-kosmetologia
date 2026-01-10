@@ -1,5 +1,4 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Button } from '@/components/ui/button';
 import { Mail, Phone, AlertCircle } from 'lucide-react';
 
 const Contact = () => {

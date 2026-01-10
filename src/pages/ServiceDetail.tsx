@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { openTallyForm } from "@/lib/tally";
 
 interface ServiceContent {
 	title: string;
@@ -252,14 +253,13 @@ const ServiceDetail = () => {
 
 							{/* CTA */}
 							<div className='flex items-center justify-center md:justify-end'>
-								<Link to='/#contact'>
-									<Button
-										size='lg'
-										className='bg-primary hover:bg-primary/90 text-primary-foreground font-light px-8'
-									>
-										Umów wizytę
-									</Button>
-								</Link>
+								<Button
+									size='lg'
+									className='bg-primary hover:bg-primary/90 text-primary-foreground font-light px-8'
+									onClick={openTallyForm}
+								>
+									Umów Konsultację
+								</Button>
 							</div>
 						</div>
 					</div>

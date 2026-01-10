@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { openTallyForm } from '@/lib/tally';
 
 const navLinks = [
   { name: 'Etapy Współpracy', href: '#stages' },
@@ -17,6 +18,10 @@ const Header = () => {
   const navigate = useNavigate();
 
   const isOnHomePage = location.pathname === '/';
+  const isOnPotwierdzeniePage = location.pathname === '/potwierdzenie';
+
+  // Force dark styling on confirmation page (light background)
+  const useDarkStyling = isScrolled || isOnPotwierdzeniePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,24 +61,11 @@ const Header = () => {
     }
   };
 
-  const scrollToContact = () => {
-    // If we're not on the home page, navigate to home page with contact hash
-    if (!isOnHomePage) {
-      navigate('/#contact');
-      return;
-    }
-
-    // If we're on the home page, scroll to contact section
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        useDarkStyling
           ? 'bg-background/95 backdrop-blur-md shadow-sm py-3'
           : 'bg-transparent py-6'
       }`}
@@ -81,10 +73,10 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Title */}
         <div className={`flex justify-center pt-4 md:pt-0 mb-[-50px] md:mb-[-30px] transition-all duration-500 ${
-          isScrolled ? 'lg:opacity-0 lg:invisible' : 'opacity-100 visible'
+          useDarkStyling ? 'lg:opacity-0 lg:invisible' : 'opacity-100 visible'
         }`}>
           <h1 className={`text-lg md:text-3xl transition-colors duration-500 ${
-            isScrolled ? 'text-foreground' : 'text-primary-foreground'
+            useDarkStyling ? 'text-foreground' : 'text-primary-foreground'
           }`}>
             pupek kosmetologia
           </h1>
@@ -108,7 +100,7 @@ const Header = () => {
               src="/logo-no-text.png"
               alt="Pupek Kosmetologia"
               className={`w-auto transition-all duration-500 ${
-                isScrolled ? 'h-16 invert' : 'h-16 md:h-36'
+                useDarkStyling ? 'h-16 invert' : 'h-16 md:h-36'
               }`}
             />
           </a>
@@ -124,7 +116,7 @@ const Header = () => {
                   scrollToSection(link.href);
                 }}
                 className={`text-sm font-sans font-medium tracking-wide link-underline transition-colors ${
-                  isScrolled
+                  useDarkStyling
                     ? 'text-foreground hover:text-primary'
                     : 'text-primary-foreground/90 hover:text-primary-foreground'
                 }`}
@@ -140,11 +132,11 @@ const Header = () => {
               variant='outline'
               size='lg'
               className={`border-2 px-8 py-6 text-sm tracking-wider transition-all ${
-                isScrolled
+                useDarkStyling
                   ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   : 'bg-accent/20 border-primary-foreground/20 text-primary-foreground hover:bg-accent hover:text-foreground'
               }`}
-              onClick={scrollToContact}
+              onClick={openTallyForm}
             >
               UMÓW KONSULTACJĘ
             </Button>
@@ -154,7 +146,7 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 transition-colors ${
-              isScrolled ? 'text-foreground' : 'text-primary-foreground'
+              useDarkStyling ? 'text-foreground' : 'text-primary-foreground'
             }`}
             aria-label="Przełącz menu"
           >
@@ -182,9 +174,8 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="default" className="mt-2" onClick={scrollToContact}>
-              <Phone className="h-4 w-4 mr-2" />
-              Umów wizytę
+            <Button variant="default" className="mt-2" onClick={openTallyForm}>
+              UMÓW KONSULTACJĘ
             </Button>
           </nav>
         </div>
