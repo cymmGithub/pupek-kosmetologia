@@ -36,8 +36,23 @@ const Hero = () => {
 					poster='/hero-poster.jpg'
 					className='w-full h-full object-cover scale-110'
 				>
+					{/* Desktop: 1366x720 for screens ≥1280px */}
 					<source
-						src='/6153801-hd_1366_720_30fps.mp4'
+						src='/hero-desktop.mp4'
+						type='video/mp4'
+						media='(min-width: 1280px)'
+					/>
+
+					{/* Tablet: 1024x540 for screens ≥768px */}
+					<source
+						src='/hero-tablet.mp4'
+						type='video/mp4'
+						media='(min-width: 768px)'
+					/>
+
+					{/* Mobile: 720x380 for screens <768px */}
+					<source
+						src='/hero-mobile.mp4'
 						type='video/mp4'
 					/>
 				</video>
