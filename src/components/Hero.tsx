@@ -34,7 +34,7 @@ const Hero = () => {
 					playsInline
 					preload='metadata'
 					poster='/hero-poster.jpg'
-					className='w-full h-full object-cover scale-110'
+					className='w-full h-full object-cover scale-100 md:scale-110'
 				>
 					{/* Desktop: 1366x720 for screens ≥1280px */}
 					<source
