@@ -42,7 +42,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		price: "250zł",
 		priceNote: "*z zabiegiem 2-3h 500zł",
 		image:
-			"https://images.pexels.com/photos/6663361/pexels-photo-6663361.jpeg?auto=compress&cs=tinysrgb&w=1920",
+			"https://images.pexels.com/photos/3762762/pexels-photo-3762762.jpeg?auto=compress&cs=tinysrgb&w=1920",
 		sections: [
 			{
 				title: "Czym jest konsultacja kosmetologiczna?",

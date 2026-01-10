@@ -29,7 +29,7 @@ const stages = [
     subtitle: 'Spersonalizowany Raport',
     icon: Mail,
     image: stagesSummary,
-    description: 'W ciągu tygodnia otrzymasz szczegółową wiadomość e-mail zawierającą: zinterpretowane przeze mnie zdjęcia z urządzenia Observ 520x, podsumowanie wywiadu, zalecenia pielęgnacyjne ciała i włosów, oraz uniwersalne wskazówki pielęgnacyjne dla Twojego typu skóry.',
+    description: 'W ciągu tygodnia otrzymasz szczegółową wiadomość e-mail zawierającą: zinterpretowane przeze mnie zdjęcia podsumowanie wywiadu, zalecenia pielęgnacyjne ciała i włosów, oraz uniwersalne wskazówki pielęgnacyjne dla Twojego typu skóry.',
   },
   {
     number: '04',
