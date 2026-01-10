@@ -111,7 +111,7 @@ const ServiceDetail = () => {
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, []);
+	}, [slug]);
 
 	if (!service) {
 		return (

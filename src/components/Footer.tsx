@@ -1,129 +1,134 @@
-import { Instagram, Facebook, MapPin, Phone, Mail } from 'lucide-react';
+import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+	const currentYear = new Date().getFullYear();
 
-  return (
-    <footer className="bg-foreground text-primary-foreground">
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <h3 className="font-milven text-2xl tracking-wider mb-4">Pupek Kosmetologia</h3>
-            <p className="text-primary-foreground/70 font-light text-sm leading-relaxed">
-              Odkryj zabiegi skrojone na miarę Twoich potrzeb i poczuj się wyjątkowo we własnej skórze.
-            </p>
-            <div className="flex gap-3 mt-6">
-              <a
-                href="#"
-                className="p-2 border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="p-2 border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
+	const footerServices = [
+		{ title: "Konsultacja kosmetologiczna", slug: "konsultacja-kosmetologiczna" },
+		{ title: "Terapia trądzikowa", slug: "terapia-tradzikowa" },
+		{ title: "Terapia przebarwień" },
+		{ title: "Terapia anti aging" },
+		{ title: "Zabieg nawilżający/regenerujący" },
+		{ title: "Zabieg relaksacyjny" },
+	];
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">SZYBKIE LINKI</h4>
-            <ul className="space-y-3">
-              {['Strona główna', 'Zabiegi', 'O nas', 'Kontakt'].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
-                    className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+	return (
+		<footer className='bg-foreground text-primary-foreground'>
+			<div className='container mx-auto px-4 lg:px-8 py-16'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
+					{/* Brand */}
+					<div className='lg:col-span-1'>
+						<h1 className='text-2xl tracking-wider mb-4'>pupek kosmetologia</h1>
+						<p className='text-primary-foreground/70 font-light text-sm leading-relaxed'>
+							Zacznij działać świadomie i wprowadzać zmiany, które pozwolą Ci
+							uzyskać realne rezultaty.
+						</p>
+					</div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">ZABIEGI</h4>
-            <ul className="space-y-3">
-              {['Odmładzanie twarzy', 'Hydrafacial', 'Terapia laserowa', 'Pielęgnacja anti-aging', 'Mikronakłuwanie'].map(
-                (service) => (
-                  <li key={service}>
-                    <a
-                      href="#services"
-                      className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
-                    >
-                      {service}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+					{/* Quick Links */}
+					<div>
+						<h4 className='font-sans text-sm tracking-wider mb-6'>
+							SZYBKIE LINKI
+						</h4>
+						<ul className='space-y-3'>
+							<li>
+								<Link
+									to="/#stages"
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									Etapy Współpracy
+								</Link>
+							</li>
+							<li>
+								<a
+									href="/#services"
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									Zabiegi
+								</a>
+							</li>
+							<li>
+								<a
+									href="/#voucher"
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									Vouchery
+								</a>
+							</li>
+							<li>
+								<a
+									href="/#contact"
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									Kontakt
+								</a>
+							</li>
+						</ul>
+					</div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-sans text-sm tracking-wider mb-6">KONTAKT</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-1 flex-shrink-0 text-primary-foreground/50" />
-                <span className="text-primary-foreground/70 text-sm font-light">
-                  123 Beauty Lane, Suite 400
-                  <br />
-                  Beverly Hills, CA 90210
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 flex-shrink-0 text-primary-foreground/50" />
-                <a
-                  href="tel:+13105551234"
-                  className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
-                >
-                  +48 515-157-681
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 flex-shrink-0 text-primary-foreground/50" />
-                <a
-                  href="mailto:pupek.kosmetologia@gmail.com"
-                  className="text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors"
-                >
-                  pupek.kosmetologia@gmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+					{/* Services */}
+					<div>
+						<h4 className='font-sans text-sm tracking-wider mb-6'>ZABIEGI</h4>
+						<ul className='space-y-3'>
+							{footerServices.map((service) => (
+								<li key={service.title}>
+									{service.slug ? (
+										<Link
+											to={`/zabiegi/${service.slug}`}
+											className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+										>
+											{service.title}
+										</Link>
+									) : (
+										<a
+											href='/#services'
+											className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+										>
+											{service.title}
+										</a>
+									)}
+								</li>
+							))}
+						</ul>
+					</div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm font-light">
-            © {currentYear} Pupek Kosmetologia Klinika Skóry. Wszelkie prawa zastrzeżone.
-          </p>
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className="text-primary-foreground/50 hover:text-primary-foreground text-sm font-light transition-colors"
-            >
-              Polityka prywatności
-            </a>
-            <a
-              href="#"
-              className="text-primary-foreground/50 hover:text-primary-foreground text-sm font-light transition-colors"
-            >
-              Regulamin
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+					{/* Contact */}
+					<div>
+						<h4 className='font-sans text-sm tracking-wider mb-6'>KONTAKT</h4>
+						<ul className='space-y-4'>
+							<li className='flex items-center gap-3'>
+								<Mail className='h-4 w-4 flex-shrink-0 text-primary-foreground/50' />
+								<a
+									href='mailto:pupek.kosmetologia@gmail.com'
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									pupek.kosmetologia@gmail.com
+								</a>
+							</li>
+							<li className='flex items-center gap-3'>
+								<Phone className='h-4 w-4 flex-shrink-0 text-primary-foreground/50' />
+								<a
+									href='tel:+13105551234'
+									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+								>
+									+48 515-157-681
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				{/* Bottom Bar */}
+				<div className='mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-center items-center gap-4'>
+					<p className='text-primary-foreground/50 text-sm font-light'>
+						© {currentYear} Pupek Kosmetologia Klinika Skóry. Wszelkie prawa
+						zastrzeżone.
+					</p>
+				</div>
+			</div>
+		</footer>
+	);
 };
 
 export default Footer;
