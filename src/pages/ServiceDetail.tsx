@@ -142,7 +142,15 @@ const ServiceDetail = () => {
 						className='w-full h-full object-cover'
 					/>
 					{/* Overlay with sophisticated gradient */}
-					<div className='absolute inset-0 bg-gradient-to-b from-hero-overlay/70 via-hero-overlay/50 to-background' />
+					<div className='absolute inset-0 bg-gradient-to-b from-hero-overlay/60 via-hero-overlay/70 to-hero-overlay/90' />
+
+			{/* Vignette overlay - darkens edges naturally */}
+			<div
+				className='absolute inset-0'
+				style={{
+					background: 'radial-gradient(ellipse at center bottom, transparent 20%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.5) 100%)'
+				}}
+			/>
 
 					{/* Grain texture */}
 					<div className='absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay' />
@@ -165,26 +173,32 @@ const ServiceDetail = () => {
 						</Link>
 
 						{/* Title */}
-						<div className='overflow-hidden mb-4'>
+						<div className='overflow-hidden pb-4'>
 							<h1
 								className={`font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-light leading-tight transition-all duration-1000 ${
 									heroVisible
 										? "opacity-100 translate-y-0"
 										: "opacity-0 translate-y-12"
 								}`}
+						style={{
+							textShadow: '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)'
+						}}
 							>
 								{service.title}
 							</h1>
 						</div>
 
 						{/* Subtitle */}
-						<div className='overflow-hidden'>
+						<div className='overflow-hidden pb-4'>
 							<p
 								className={`text-white/90 text-lg md:text-xl font-light transition-all duration-1000 delay-200 ${
 									heroVisible
 										? "opacity-100 translate-y-0"
 										: "opacity-0 translate-y-8"
 								}`}
+						style={{
+							textShadow: '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)'
+						}}
 							>
 								{service.subtitle}
 							</p>
