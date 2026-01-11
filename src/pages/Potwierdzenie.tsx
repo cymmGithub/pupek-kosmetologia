@@ -47,12 +47,12 @@ const Potwierdzenie = () => {
           <img
             src={willowBg}
             alt=''
-            className='absolute top-20 right-10 w-64 md:w-96 opacity-[0.14] transform rotate-12'
+            className='absolute top-20 right-0 md:right-20 w-40 md:w-96 opacity-[0.14] transform rotate-12'
           />
           <img
             src={willowBg}
             alt=''
-            className='absolute top-20 left-10 w-48 md:w-96 opacity-[0.14] transform -rotate-12 scale-x-[-1]'
+            className='absolute top-20 left-0 md:left-20 w-40 md:w-96 opacity-[0.14] transform -rotate-12 scale-x-[-1]'
           />
         </div>
 

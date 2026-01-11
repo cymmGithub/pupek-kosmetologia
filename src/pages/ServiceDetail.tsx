@@ -95,7 +95,6 @@ const servicesContent: Record<string, ServiceContent> = {
 					"Zmniejszającym stan zapalny",
 					"Złuszczającym naskórek",
 					"Rozjaśniającym przebarwienia pozapalne",
-					"Indywidualnie dostosowanym do aktualnej kondycji skóry",
 				],
 			},
 		],
