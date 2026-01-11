@@ -33,26 +33,11 @@ const Hero = () => {
 					loop
 					playsInline
 					preload='metadata'
-					poster='/hero-poster.jpg'
-					className='w-full h-full object-cover scale-100 md:scale-110'
+					poster='/hero2-poster.jpg'
+					className='w-full h-full object-cover scale-100 md:scale-110 object-[50%_center] md:object-center'
 				>
-					{/* Desktop: 1366x720 for screens ≥1280px */}
 					<source
-						src='/hero-desktop.mp4'
-						type='video/mp4'
-						media='(min-width: 1280px)'
-					/>
-
-					{/* Tablet: 1024x540 for screens ≥768px */}
-					<source
-						src='/hero-tablet.mp4'
-						type='video/mp4'
-						media='(min-width: 768px)'
-					/>
-
-					{/* Mobile: 720x380 for screens <768px */}
-					<source
-						src='/hero-mobile.mp4'
+						src='/hero-background-video.mp4'
 						type='video/mp4'
 					/>
 				</video>
