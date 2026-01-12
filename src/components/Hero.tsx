@@ -33,7 +33,7 @@ const Hero = () => {
 					loop
 					playsInline
 					preload='metadata'
-					poster='/hero2-poster.jpg'
+					poster='/hero-poster2.jpg'
 					className='w-full h-full object-cover scale-100 md:scale-110 object-[50%_center] md:object-center'
 				>
 					<source

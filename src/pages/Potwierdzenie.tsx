@@ -16,12 +16,12 @@ const Potwierdzenie = () => {
   const nextSteps = [
     {
       icon: Mail,
-      title: 'Potwerdzenie',
-      description: 'W ciągu jednego dnia otrzymasz ode mnie potwierdzenie rezerwacji, w zależności od tego jaka forma kontaktu została przez Ciebie wybrana.',},
+      title: 'Potwierdzenie',
+      description: 'W przeciągu trzech dni skontaktuję się z Tobą w celu umówienia terminu konsultacji.',},
     {
       icon: Calendar,
       title: 'Przygotuj się do konsultacji',
-      description: 'Zrób zdjęcia swojej obecnej pielęgnacji i przygotuj listę pytań dotyczących Twojej skóry.',
+      description: 'Przygotuj się do konsultacji według wysłanej przeze mnie instrukcji PDF i przygotuj listę pytań dotyczących Twojej skóry.',
     },
     {
       icon: MessageCircleMore,
