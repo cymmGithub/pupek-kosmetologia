@@ -41,18 +41,7 @@ const Hero = () => {
 						type='video/mp4'
 					/>
 				</video>
-
-				{/* Multi-layered atmospheric overlay */}
-				<div className='absolute inset-0 hero-overlay-enhanced' />
-				<div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20' />
-
-				{/* Decorative gradient orbs for depth */}
-				<div className='absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float-slow' />
-				<div className='absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/15 rounded-full blur-3xl animate-float-slower' />
 			</div>
-
-			{/* Grain texture overlay for luxury feel */}
-			<div className='absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay pointer-events-none z-[5]' />
 
 			{/* Content */}
 			<div className='relative z-10 h-full flex flex-col items-center justify-center text-center px-4'>
@@ -71,7 +60,8 @@ const Hero = () => {
 									}`}
 									style={{
 										transitionDelay: `${300 + index * 150}ms`,
-										textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
+										textShadow:
+										"0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)",
 									}}
 								>
 									{word}
@@ -79,7 +69,7 @@ const Hero = () => {
 							))}
 						</div>
 						{/* Second line - italic */}
-						<div className='italic mb-2'>
+						<div className='italic pb-6'>
 							{headingLine2Words.map((word, index) => (
 								<span
 									key={index}
@@ -90,7 +80,8 @@ const Hero = () => {
 									}`}
 									style={{
 										transitionDelay: `${300 + (headingLine1Words.length + index) * 150}ms`,
-										textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
+										textShadow:
+										"0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)",
 									}}
 								>
 									{word}
@@ -115,7 +106,7 @@ const Hero = () => {
 					}`}
 					style={{
 						transitionDelay: '1200ms',
-						textShadow: '0 2px 10px rgba(0, 0, 0, 0.2)'
+						textShadow: '0 2px 10px rgba(0, 0, 0, 0.6)'
 					}}
 				>
 					Zacznij działać świadomie i wprowadzać zmiany, <br className='hidden sm:block' />
