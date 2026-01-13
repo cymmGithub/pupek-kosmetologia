@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CloudinaryImage from "@/components/CloudinaryImage";
 import { openTallyForm } from "@/lib/tally";
 
 interface ServiceContent {
@@ -20,7 +21,8 @@ interface ServiceContent {
 	duration: string;
 	price: string;
 	priceNote?: string;
-	image: string;
+	image?: string;
+	cloudinaryId?: string;
 	sections: {
 		title: string;
 		content: string[];
@@ -44,6 +46,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		priceNote: "*z zabiegiem 2-3h 500zł",
 		image:
 			"https://images.pexels.com/photos/3762762/pexels-photo-3762762.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3762762_h456x1",
 		sections: [
 			{
 				title: "Czym jest konsultacja kosmetologiczna?",
@@ -76,6 +79,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		price: "250-350zł",
 		image:
 			"https://images.pexels.com/photos/3373721/pexels-photo-3373721.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3373721_pefceo",
 		sections: [
 			{
 				title: "Czym jest terapia trądzikowa?",
@@ -108,6 +112,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		price: "300-350zł",
 		image:
 			"https://images.pexels.com/photos/3762100/pexels-photo-3762100.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3762100_ylyyob",
 		sections: [
 			{
 				title: "Czym jest terapia przebarwień?",
@@ -140,6 +145,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		price: "300-350zł",
 		image:
 			"https://images.pexels.com/photos/3762771/pexels-photo-3762771.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3762771_jdy6iz",
 		sections: [
 			{
 				title: "Czym jest terapia anti-aging?",
@@ -170,13 +176,13 @@ const servicesContent: Record<string, ServiceContent> = {
 	},
 	"zabieg-nawilzajacy-regenerujacy": {
 		title: "Zabieg nawilżający/regenerujący",
-		subtitle:
-			"Głębokie nawilżenie i regeneracja skóry",
+		subtitle: "Głębokie nawilżenie i regeneracja skóry",
 		description: null,
 		duration: "ok. 1h",
 		price: "250-350zł",
 		image:
 			"https://images.pexels.com/photos/3762646/pexels-photo-3762646.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3762646_w4mpyh",
 		sections: [
 			{
 				title: "Czym jest zabieg nawilżający/regenerujący?",
@@ -212,6 +218,7 @@ const servicesContent: Record<string, ServiceContent> = {
 		price: "350-400zł",
 		image:
 			"https://images.pexels.com/photos/3762562/pexels-photo-3762562.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		cloudinaryId: "pexels-photo-3762562_dtgvj8",
 		sections: [
 			{
 				title: "Czym jest zabieg relaksacyjny?",
@@ -270,11 +277,20 @@ const ServiceDetail = () => {
 			<section className='relative h-[60vh] md:h-[70vh] overflow-hidden'>
 				{/* Background Image */}
 				<div className='absolute inset-0'>
-					<img
-						src={service.image}
-						alt={service.title}
-						className='w-full h-full object-cover'
-					/>
+					{service.cloudinaryId ? (
+						<CloudinaryImage
+							publicId={service.cloudinaryId}
+							alt={service.title}
+							className='w-full h-full object-cover'
+							priority
+						/>
+					) : (
+						<img
+							src={service.image}
+							alt={service.title}
+							className='w-full h-full object-cover'
+						/>
+					)}
 					{/* Overlay with sophisticated gradient */}
 					<div className='absolute inset-0 bg-gradient-to-b from-hero-overlay/60 via-hero-overlay/70 to-hero-overlay/90' />
 
