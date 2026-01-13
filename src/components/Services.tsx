@@ -1,6 +1,5 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Sparkles, Droplets, Sun, Heart, Leaf, LucideIcon, MessageCircleMore } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Droplets, Sun, Heart, Leaf, LucideIcon, MessageCircleMore, Cloud, TreePalm } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import willowBg from '/willow.png';
 
@@ -34,24 +33,28 @@ const services: Service[] = [
     title: 'Terapia przebarwień',
     description: 'Specjalistyczny zabieg wyrównujący koloryt i redukujący przebarwienia.',
     price: '300-350zł (ok. 1h)',
+    slug: 'terapia-przebarwien',
   },
   {
     icon: Heart,
     title: 'Terapia anti aging',
     description: 'Zaawansowana terapia przeciwstarzeniowa redukująca widoczność zmarszczek.',
     price: '300-350zł (ok. 1h)',
+    slug: 'terapia-anti-aging',
   },
   {
     icon: Droplets,
     title: 'Zabieg nawilżający/regenerujący',
     description: 'Głębokie nawilżenie i regeneracja skóry dla przywrócenia jej naturalnej równowagi.',
     price: '250-350zł (ok. 1h)',
+    slug: 'zabieg-nawilzajacy-regenerujacy',
   },
   {
-    icon: Sparkles,
+    icon: TreePalm,
     title: 'Zabieg relaksacyjny',
     description: 'Relaksujący zabieg łączący pielęgnację skóry z chwilą odprężenia i spokoju.',
     price: '350-400zł (ok. 1,5h)',
+    slug: 'zabieg-relaksacyjny',
   },
 ];
 

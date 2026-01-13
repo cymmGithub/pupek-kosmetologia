@@ -7,10 +7,10 @@ const Footer = () => {
 	const footerServices = [
 		{ title: "Konsultacja kosmetologiczna", slug: "konsultacja-kosmetologiczna" },
 		{ title: "Terapia trądzikowa", slug: "terapia-tradzikowa" },
-		{ title: "Terapia przebarwień" },
-		{ title: "Terapia anti aging" },
-		{ title: "Zabieg nawilżający/regenerujący" },
-		{ title: "Zabieg relaksacyjny" },
+		{ title: "Terapia przebarwień", slug: "terapia-przebarwien" },
+		{ title: "Terapia anti aging", slug: "terapia-anti-aging" },
+		{ title: "Zabieg nawilżający/regenerujący", slug: "zabieg-nawilzajacy-regenerujacy" },
+		{ title: "Zabieg relaksacyjny", slug: "zabieg-relaksacyjny" },
 	];
 
 	return (

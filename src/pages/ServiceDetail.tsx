@@ -16,7 +16,7 @@ import { openTallyForm } from "@/lib/tally";
 interface ServiceContent {
 	title: string;
 	subtitle: string;
-	description: string;
+	description: string | null;
 	duration: string;
 	price: string;
 	priceNote?: string;
@@ -71,7 +71,7 @@ const servicesContent: Record<string, ServiceContent> = {
 	"terapia-tradzikowa": {
 		title: "Terapia trądzikowa",
 		subtitle: "Skuteczne rozwiązanie problemu trądziku",
-		description: "Terapia kosmetologiczna dostosowana do potrzeb Twojej skóry.",
+		description: null,
 		duration: "ok. 1h",
 		price: "250-350zł",
 		image:
@@ -95,6 +95,140 @@ const servicesContent: Record<string, ServiceContent> = {
 					"Zmniejszającym stan zapalny",
 					"Złuszczającym naskórek",
 					"Rozjaśniającym przebarwienia pozapalne",
+				],
+			},
+		],
+	},
+	"terapia-przebarwien": {
+		title: "Terapia przebarwień",
+		subtitle:
+			"Specjalistyczny zabieg wyrównujący koloryt i redukujący przebarwienia",
+		description: "",
+		duration: "ok. 1h",
+		price: "300-350zł",
+		image:
+			"https://images.pexels.com/photos/3762100/pexels-photo-3762100.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		sections: [
+			{
+				title: "Czym jest terapia przebarwień?",
+				content: [
+					"Terapia przebarwień polega na określeniu głębokości przebarwień, znalezieniu przyczyny ich występowania, niwelowaniu przebarwień istniejących oraz zapobieganiu tworzeniu nowych.",
+					"Podczas pracy nad tym rodzajem problemu bardzo ważny jest właściwy dobór pielęgnacji domowej, aby podtrzymać efekty terapii gabinetowej i zapobiec powstawaniu nowych przebarwień.",
+				],
+			},
+			{
+				title: "Jak działają substancje zabiegowe?",
+				content: [
+					"Substancje z których korzystam podczas zabiegów gabinetowych działają poprzez różne mechanizmy, które wspólnie prowadzą do widocznej redukcji przebarwień:",
+				],
+				benefits: [
+					"Hamowanie nadmiernej produkcji barwnika",
+					"Blokowanie przemieszczania się barwnika do wyższych warstw naskórka",
+					"Usuwanie już powstałych przebarwień",
+					"Redukcję stanu zapalnego",
+					"Działanie antyoksydacyjne",
+				],
+			},
+		],
+	},
+	"terapia-anti-aging": {
+		title: "Terapia anti aging",
+		subtitle:
+			"Zaawansowana terapia przeciwstarzeniowa redukująca widoczność zmarszczek",
+		description: null,
+		duration: "ok. 1h",
+		price: "300-350zł",
+		image:
+			"https://images.pexels.com/photos/3762771/pexels-photo-3762771.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		sections: [
+			{
+				title: "Czym jest terapia anti-aging?",
+				content: [
+					"Terapia anti-aging jest kompleksową terapią przeciwstarzeniową, która łączy w sobie różne techniki i składniki aktywne, aby skutecznie redukować widoczność zmarszczek i poprawiać ogólną kondycję skóry.",
+				],
+			},
+			{
+				title: "Co obejmuje terapia?",
+				content: [
+					"Podczas terapii skupiamy się na kompleksowym podejściu do odmłodzenia skóry:",
+				],
+				benefits: [
+					"Wyrównanie kolorytu skóry",
+					"Przyspieszenie odnowy komórkowej",
+					"Wygładzenie struktury naskórka",
+					"Głębokie nawilżenie",
+					"Stymulację produkcji kolagenu",
+				],
+			},
+			{
+				title: "Pielęgnacja domowa",
+				content: [
+					"W terapii domowej przeważają składniki chroniące przed fotostarzeniem, regenerujące, rozjaśniające i pogrubiające skórę właściwą. Właściwa pielęgnacja domowa jest kluczowa dla utrzymania efektów zabiegów gabinetowych.",
+				],
+			},
+		],
+	},
+	"zabieg-nawilzajacy-regenerujacy": {
+		title: "Zabieg nawilżający/regenerujący",
+		subtitle:
+			"Głębokie nawilżenie i regeneracja skóry",
+		description: null,
+		duration: "ok. 1h",
+		price: "250-350zł",
+		image:
+			"https://images.pexels.com/photos/3762646/pexels-photo-3762646.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		sections: [
+			{
+				title: "Czym jest zabieg nawilżający/regenerujący?",
+				content: [
+					"Jest to zabieg od którego najczęściej rozpoczyna się pracę z jakimkolwiek problemem skórnym. Stanowi fundament skutecznej terapii kosmetologicznej.",
+				],
+			},
+			{
+				title: "Dlaczego przygotowanie skóry jest ważne?",
+				content: [
+					"Dzięki właściwemu przygotowaniu skóry przed bardziej agresywnymi terapiami:",
+				],
+				benefits: [
+					"Redukujemy możliwość wystąpienia podrażnień po zabiegu",
+					"Usprawniamy regenerację pozabiegową",
+					"Minimalizujemy ryzyko wystąpienia powikłań",
+				],
+			},
+			{
+				title: "Dodatkowe korzyści",
+				content: [
+					"Często sam zabieg nawilżający/regenerujący potrafi przynieść istotne korzyści w redukcji trądziku, widoczności płytkich zmarszczek oraz poprawy kolorytu skóry.",
+				],
+			},
+		],
+	},
+	"zabieg-relaksacyjny": {
+		title: "Zabieg relaksacyjny",
+		subtitle:
+			"Relaksujący zabieg łączący pielęgnację skóry z chwilą odprężenia i spokoju",
+		description: null,
+		duration: "ok. 1,5h",
+		price: "350-400zł",
+		image:
+			"https://images.pexels.com/photos/3762562/pexels-photo-3762562.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		sections: [
+			{
+				title: "Czym jest zabieg relaksacyjny?",
+				content: [
+					"Jest to delikatny zabieg odświeżający wygląd Twojej skóry ale też działający aktywnie na jej aktualne potrzeby. Obszar zabiegowy obejmuje twarz, szyję i dekolt, zapewniając kompleksową pielęgnację i głęboki relaks.",
+				],
+			},
+			{
+				title: "Co obejmuje zabieg?",
+				content: ["Zabieg obejmuje pełen rytuał pielęgnacyjny:"],
+				benefits: [
+					"Demakijaż",
+					"Oczyszczanie",
+					"Część aktywną zabiegu",
+					"Maskę (algową, w płachcie bądź kremie)",
+					"Delikatny masaż skóry głowy, szyi i dekoltu",
+					"Nałożenie pielęgnacji pozabiegowej",
 				],
 			},
 		],
@@ -144,13 +278,14 @@ const ServiceDetail = () => {
 					{/* Overlay with sophisticated gradient */}
 					<div className='absolute inset-0 bg-gradient-to-b from-hero-overlay/60 via-hero-overlay/70 to-hero-overlay/90' />
 
-			{/* Vignette overlay - darkens edges naturally */}
-			<div
-				className='absolute inset-0'
-				style={{
-					background: 'radial-gradient(ellipse at center bottom, transparent 20%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.5) 100%)'
-				}}
-			/>
+					{/* Vignette overlay - darkens edges naturally */}
+					<div
+						className='absolute inset-0'
+						style={{
+							background:
+								"radial-gradient(ellipse at center bottom, transparent 20%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.5) 100%)",
+						}}
+					/>
 
 					{/* Grain texture */}
 					<div className='absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay' />
@@ -180,9 +315,10 @@ const ServiceDetail = () => {
 										? "opacity-100 translate-y-0"
 										: "opacity-0 translate-y-12"
 								}`}
-						style={{
-							textShadow: '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)'
-						}}
+								style={{
+									textShadow:
+										"0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)",
+								}}
 							>
 								{service.title}
 							</h1>
@@ -196,9 +332,10 @@ const ServiceDetail = () => {
 										? "opacity-100 translate-y-0"
 										: "opacity-0 translate-y-8"
 								}`}
-						style={{
-							textShadow: '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15)'
-						}}
+								style={{
+									textShadow:
+										"0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.35)",
+								}}
 							>
 								{service.subtitle}
 							</p>
@@ -208,7 +345,7 @@ const ServiceDetail = () => {
 			</section>
 
 			{/* Quick Info Bar */}
-			<section className='relative -mt-16 mb-24'>
+			<section className='relative -mt-16 mb-8'>
 				<div className='container mx-auto px-4 lg:px-8'>
 					<div
 						className={`bg-card/95 backdrop-blur-xl border border-border/50 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto shadow-2xl transition-all duration-1000 ${
@@ -268,21 +405,25 @@ const ServiceDetail = () => {
 			{/* Main Content */}
 			<section className='py-12 md:py-16'>
 				<div className='container mx-auto px-4 lg:px-8'>
-					<div className='max-w-4xl mx-auto'>
+					<div ref={contentRef} className='max-w-4xl mx-auto'>
 						{/* Description */}
-						<div ref={contentRef} className='mb-16'>
-							<div
-								className={`prose prose-lg max-w-none transition-all duration-1000 ${
-									contentVisible
-										? "opacity-100 translate-y-0"
-										: "opacity-0 translate-y-12"
-								}`}
-							>
-								<p className='text-xl md:text-2xl text-foreground/70 font-light leading-relaxed'>
-									{service.description}
-								</p>
+						{service.description ? (
+							<div className='mb-16'>
+								<div
+									className={`prose prose-lg max-w-none transition-all duration-1000 ${
+										contentVisible
+											? "opacity-100 translate-y-0"
+											: "opacity-0 translate-y-12"
+									}`}
+								>
+									<p className='text-xl md:text-2xl text-foreground/70 font-light leading-relaxed'>
+										{service.description}
+									</p>
+								</div>
+								{/* Decorative line */}
+								<div className='w-16 h-px bg-gradient-to-r from-primary/50 to-transparent mb-0 mt-12' />
 							</div>
-						</div>
+						) : null}
 
 						{/* Content Sections */}
 						{service.sections.map((section, index) => (
@@ -295,9 +436,6 @@ const ServiceDetail = () => {
 								}`}
 								style={{ transitionDelay: `${(index + 1) * 150}ms` }}
 							>
-								{/* Decorative line */}
-								<div className='w-16 h-px bg-gradient-to-r from-primary/50 to-transparent mb-6' />
-
 								<h2 className='font-serif text-3xl md:text-4xl text-foreground mb-6 font-light'>
 									{section.title}
 								</h2>
