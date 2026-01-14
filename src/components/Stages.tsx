@@ -105,13 +105,6 @@ const Stages = () => {
 
   return (
     <section id="stages" className="relative py-24 md:py-32 bg-gradient-to-b from-background via-accent/5 to-background overflow-hidden">
-      {/* Atmospheric background elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/6 rounded-full blur-3xl animate-float-slow" />
-      <div className="absolute bottom-1/3 left-0 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-float-slower" />
-
-      {/* Grain texture overlay */}
-      <div className="absolute inset-0 bg-noise opacity-[0.015] mix-blend-overlay pointer-events-none" />
-
       {/* Decorative willow backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top right */}
@@ -201,6 +194,12 @@ const Stages = () => {
           ))}
         </div>
       </div>
+      			{/* Decorative line */}
+			<div
+				className={`w-96 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mt-20 transition-all duration-1000 delay-300 ${
+					titleVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
+				}`}
+			/>
     </section>
   );
 };
