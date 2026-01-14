@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { P } from "@/components/Text";
 
@@ -110,7 +110,7 @@ const Footer = () => {
 							<li className='flex items-center gap-3'>
 								<Phone className='h-4 w-4 flex-shrink-0 text-primary-foreground/50' />
 								<a
-									href='tel:+13105551234'
+									href='tel:+48515157681'
 									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
 								>
 									+48 515-157-681
