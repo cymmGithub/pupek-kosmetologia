@@ -8,10 +8,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative py-24 md:py-32 bg-gradient-to-br from-background via-secondary/20 to-background overflow-hidden">
-      {/* Decorative gradient orbs for atmospheric depth */}
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow" />
-      <div className="absolute bottom-1/3 -right-48 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float-slower" />
-
       {/* Subtle grain texture */}
       <div className="absolute inset-0 bg-noise opacity-[0.015] mix-blend-overlay pointer-events-none" />
 

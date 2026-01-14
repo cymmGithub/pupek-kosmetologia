@@ -36,7 +36,7 @@ const Potwierdzenie = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className='relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-32'>
+      <section className='relative min-h-[35vh] flex items-center justify-center overflow-hidden pt-32 mt-20'>
         {/* Background elements */}
         <div className='absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background' />
 
@@ -48,12 +48,12 @@ const Potwierdzenie = () => {
           <img
             src={willowBg}
             alt=''
-            className='absolute top-20 right-0 md:right-20 w-40 md:w-96 opacity-[0.14] transform rotate-12'
+            className='absolute top-20 right-0 md:right-20 lg:right-60 xl:right-80 w-32 md:w-48 opacity-[0.14] transform rotate-12'
           />
           <img
             src={willowBg}
             alt=''
-            className='absolute top-20 left-0 md:left-20 w-40 md:w-96 opacity-[0.14] transform -rotate-12 scale-x-[-1]'
+            className='absolute top-20 left-0 md:left-20 lg:left-60 xl:left-80 w-32 md:w-48 opacity-[0.14] transform -rotate-12 scale-x-[-1]'
           />
         </div>
 
@@ -70,7 +70,7 @@ const Potwierdzenie = () => {
             </div>
 
             {/* Title */}
-            <div className='overflow-hidden mb-4'>
+            <div className='overflow-hidden pb-6 mb-4'>
               <h1
                 className={`font-serif text-4xl md:text-5xl lg:text-6xl text-foreground font-light leading-tight transition-all duration-1000 delay-200 ${
                   heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -83,46 +83,17 @@ const Potwierdzenie = () => {
 
             {/* Decorative line */}
             <div
-              className={`w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-6 transition-all duration-1000 delay-300 ${
+              className={`w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mx-auto mb-0 transition-all duration-1000 delay-300 ${
                 heroVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
               }`}
             />
 
-            {/* Important Notice - Emphasized */}
-            <div
-              className={`max-w-2xl mx-auto transition-all duration-1000 delay-400 ${
-                heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-            >
-              <div className='relative border-2 border-primary/30 bg-gradient-to-br from-primary/5 via-primary/3 to-accent/5 rounded-xl p-6 md:p-8 overflow-hidden'>
-                {/* Decorative corner accents */}
-                <div className='absolute top-0 left-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl' />
-                <div className='absolute bottom-0 right-0 w-32 h-32 bg-primary/8 rounded-full blur-3xl' />
-
-                {/* Content */}
-                <div className='relative'>
-                  <div className='flex items-start gap-4'>
-
-
-                    {/* Important message */}
-                    <div className='space-y-3 flex-1'>
-                      <P className='text-foreground/80 text-sm md:text-base leading-relaxed font-normal'>
-                        Pamiętaj, że konsultacja kosmetologiczna jest obowiązkowym elementem podjęcia Naszej współpracy. Nie wykonuję zabiegów bez wcześniej odbytej konsultacji kosmetologicznej.
-                      </P>
-                      <P className='text-foreground/70 text-sm md:text-base leading-relaxed'>
-                        Aby zapewnić bezpieczeństwo podczas terapii zabiegowych muszę zapoznać się z Twoją aktualną pielęgnacją, stylem życia oraz ogólnym stanem zdrowia. Podczas konsultacji omawiamy wszystkie te kwestie, dzięki czemu zwiększamy szanse na najlepsze rezultaty zabiegowe oraz minimalizujemy ryzyko ewentualnych powikłań.
-                      </P>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Next Steps Section */}
-      <section className='relative py-12 md:pb-20 md:pt-8'>
+      <section className='relative py-12 md:pb-20'>
         <div className='container mx-auto px-4 lg:px-8'>
           <div className='max-w-4xl mx-auto'>
             {/* Section Title */}
