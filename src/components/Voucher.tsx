@@ -19,13 +19,6 @@ const Voucher = () => {
 			{/* Enhanced Overlay with gradient */}
 			<div className='absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary/80 z-10' />
 
-			{/* Atmospheric elements */}
-			<div className='absolute top-1/4 -left-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float-slow z-10' />
-			<div className='absolute bottom-1/3 -right-48 w-80 h-80 bg-primary-foreground/5 rounded-full blur-3xl animate-float-slower z-10' />
-
-			{/* Grain texture overlay */}
-			<div className='absolute inset-0 bg-noise opacity-[0.02] mix-blend-overlay pointer-events-none z-15' />
-
 			{/* Content */}
 			<div className='relative z-20 py-24 md:py-32'>
 				<div className='container mx-auto px-4 lg:px-8'>

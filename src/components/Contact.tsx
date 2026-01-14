@@ -87,9 +87,6 @@ const Contact = () => {
                 <div className="relative">
                   {/* Icon */}
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="p-2.5 rounded-lg bg-primary/15 flex-shrink-0">
-                      <AlertCircle className="w-6 h-6 text-primary" />
-                    </div>
 
                     {/* Important message */}
                     <div className="space-y-3 flex-1">

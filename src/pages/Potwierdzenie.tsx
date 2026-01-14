@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CheckCircle2, MessageCircleMore, Mail, Calendar, AlertCircle } from 'lucide-react';
+import { CheckCircle2, MessageCircleMore, Mail, Calendar } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
