@@ -1,5 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { FileText, Stethoscope, Mail, Sparkles } from 'lucide-react';
+import { P } from '@/components/Text';
 import stagesBeforeVisit from '@/assets/stages-before-visit.jpg';
 import stagesConsultation from '@/assets/stages-consultation.jpg';
 import stagesSummary from '@/assets/stages-summary.jpg';
@@ -91,9 +92,9 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
         <div className="w-16 h-px bg-gradient-to-r from-primary/50 to-transparent" />
 
         {/* Description with better spacing */}
-        <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
+        <P className="text-foreground/70 text-base md:text-lg leading-relaxed">
           {stage.description}
-        </p>
+        </P>
       </div>
     </div>
   );
@@ -183,13 +184,13 @@ const Stages = () => {
           />
 
           <div className="overflow-hidden">
-            <p
+            <P
               className={`text-foreground/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed transition-all duration-1000 delay-500 ${
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
               Poszczególne etapy są nieodłącznym elementem podczas każdej współpracy. Zapewniają one możliwość uzyskania najlepszych efektów terapii oraz wykluczenie przeciwskazań zabiegowych.
-            </p>
+            </P>
           </div>
         </div>
 

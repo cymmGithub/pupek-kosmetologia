@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Button } from "@/components/ui/button";
+import { P } from "@/components/Text";
 import parallaxBg from "@/assets/parallax-bg.jpg";
 
 const About = () => {
@@ -32,12 +33,12 @@ const About = () => {
 						<h2 className='font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-light italic leading-tight'>
 							Od Kobiety, dla Kobiet
 						</h2>
-						<p className='mt-8 text-primary-foreground/85 font-light text-lg leading-relaxed'>
+						<P className='mt-8 text-primary-foreground/85 font-light text-lg leading-relaxed'>
 							Wierzę, że dbanie o siebie to coś więcej niż tylko zabiegi – to czas na oddech i odkrycie swojego naturalnego blasku. Stworzyłam to kameralne miejsce z czystej pasji do kosmetologii, aby zaoferować Ci to, czego często brakuje w dużych klinikach: stuprocentową uwagę i pełne zaangażowanie.
-						</p>
-						<p className='mt-8 text-primary-foreground/85 font-light text-lg leading-relaxed'>
+						</P>
+						<P className='mt-8 text-primary-foreground/85 font-light text-lg leading-relaxed'>
 							Każde spotkanie traktuję indywidualnie, łącząc świeżą wiedzę z uważnością na Twoje potrzeby. Moim celem nie jest zmiana Twoich rysów, ale wydobycie tego, co w Tobie najpiękniejsze, w atmosferze pełnego relaksu i zaufania.
-						</p>
+						</P>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,6 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Mail, Phone, AlertCircle } from 'lucide-react';
+import { P } from '@/components/Text';
 
 const Contact = () => {
   const { ref: textRef, isVisible: textVisible } = useScrollReveal();
@@ -33,14 +34,14 @@ const Contact = () => {
             </div>
 
             {/* Description with delay */}
-            <p
+            <P
               className={`text-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-md transition-all duration-1000 delay-200 ${
                 textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
               Potrzebujesz wsparcia lub chcesz dowiedzieć się więcej o moich usługach?
               Wyślij mi wiadomość email lub umów się na konsultację.
-            </p>
+            </P>
 
             {/* Contact links with icons and staggered animation */}
             <div
@@ -96,13 +97,13 @@ const Contact = () => {
 
                     {/* Important message */}
                     <div className="space-y-3 flex-1">
-                      <p className="text-foreground/80 text-sm md:text-base leading-relaxed font-normal">
+                      <P className="text-foreground/80 text-sm md:text-base leading-relaxed font-normal">
                         Konsultacja kosmetologiczna jest obowiązkowym elementem podjęcia naszej współpracy.
                         Nie wykonuję zabiegów bez wcześniej odbytej konsultacji.
-                      </p>
-                      <p className="text-foreground/70 text-sm md:text-base leading-relaxed">
+                      </P>
+                      <P className="text-foreground/70 text-sm md:text-base leading-relaxed">
                         Aby zapewnić bezpieczeństwo podczas terapii zabiegowych muszę zapoznać się z Twoją aktualną pielęgnacją, stylem życia oraz ogólnym stanem zdrowia. Podczas konsultacji omawiamy wszystkie te kwestie, dzięki czemu zwiększamy szanse na najlepsze rezultaty zabiegowe oraz minimalizujemy ryzyko ewentualnych powikłań.
-                      </p>
+                      </P>
                     </div>
                   </div>
                 </div>

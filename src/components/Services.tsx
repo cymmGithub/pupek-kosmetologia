@@ -1,6 +1,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Droplets, Sun, Heart, Leaf, LucideIcon, MessageCircleMore, Cloud, TreePalm } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { P } from '@/components/Text';
 import willowBg from '/willow.png';
 
 interface Service {
@@ -106,13 +107,13 @@ const Services = () => {
           />
 
           <div className="overflow-hidden">
-            <p
+            <P
               className={`text-foreground/70 max-w-1xl mx-auto text-base md:text-lg font-light leading-relaxed transition-all duration-1000 delay-300 ${
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
               Każdy zabieg jest starannie dobrany, aby odpowiedzieć na aktualne potrzeby Twojej skóry.
-            </p>
+            </P>
           </div>
         </div>
 
@@ -147,9 +148,9 @@ const Services = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-foreground/60 font-light text-sm md:text-base leading-relaxed mb-6">
+                <P className="text-foreground/60 font-light text-sm md:text-base leading-relaxed mb-6">
                   {service.description}
-                </p>
+                </P>
 
                 {/* Price section */}
                 <div className="pt-4 border-t border-border/50 group-hover:border-primary/20 transition-colors duration-300">

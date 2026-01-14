@@ -1,5 +1,6 @@
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { P } from "@/components/Text";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -20,10 +21,10 @@ const Footer = () => {
 					{/* Brand */}
 					<div className='lg:col-span-1'>
 						<h1 className='text-2xl tracking-wider mb-4'>pupek kosmetologia</h1>
-						<p className='text-primary-foreground/70 font-light text-sm leading-relaxed'>
+						<P className='text-primary-foreground/70 font-light text-sm leading-relaxed'>
 							Zacznij działać świadomie i wprowadzać zmiany, które pozwolą Ci
 							uzyskać realne rezultaty.
-						</p>
+						</P>
 					</div>
 
 					{/* Quick Links */}
@@ -121,10 +122,10 @@ const Footer = () => {
 
 				{/* Bottom Bar */}
 				<div className='mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-center items-center gap-4'>
-					<p className='text-primary-foreground/50 text-sm font-light'>
+					<P className='text-primary-foreground/50 text-sm font-light'>
 						© {currentYear} Pupek Kosmetologia Klinika Skóry. Wszelkie prawa
 						zastrzeżone.
-					</p>
+					</P>
 				</div>
 			</div>
 		</footer>

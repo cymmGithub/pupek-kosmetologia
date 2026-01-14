@@ -3,6 +3,7 @@ import { CheckCircle2, MessageCircleMore, Mail, Calendar, AlertCircle } from 'lu
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { P } from '@/components/Text';
 import willowBg from '/willow.png';
 
 const Potwierdzenie = () => {
@@ -105,12 +106,12 @@ const Potwierdzenie = () => {
 
                     {/* Important message */}
                     <div className='space-y-3 flex-1'>
-                      <p className='text-foreground/80 text-sm md:text-base leading-relaxed font-normal'>
+                      <P className='text-foreground/80 text-sm md:text-base leading-relaxed font-normal'>
                         Pamiętaj, że konsultacja kosmetologiczna jest obowiązkowym elementem podjęcia Naszej współpracy. Nie wykonuję zabiegów bez wcześniej odbytej konsultacji kosmetologicznej.
-                      </p>
-                      <p className='text-foreground/70 text-sm md:text-base leading-relaxed'>
+                      </P>
+                      <P className='text-foreground/70 text-sm md:text-base leading-relaxed'>
                         Aby zapewnić bezpieczeństwo podczas terapii zabiegowych muszę zapoznać się z Twoją aktualną pielęgnacją, stylem życia oraz ogólnym stanem zdrowia. Podczas konsultacji omawiamy wszystkie te kwestie, dzięki czemu zwiększamy szanse na najlepsze rezultaty zabiegowe oraz minimalizujemy ryzyko ewentualnych powikłań.
-                      </p>
+                      </P>
                     </div>
                   </div>
                 </div>
@@ -164,9 +165,9 @@ const Potwierdzenie = () => {
                     <h3 className='font-serif text-2xl md:text-3xl text-foreground font-light mb-3'>
                       {step.title}
                     </h3>
-                    <p className='text-foreground/70 text-base md:text-lg leading-relaxed'>
+                    <P className='text-foreground/70 text-base md:text-lg leading-relaxed'>
                       {step.description}
-                    </p>
+                    </P>
                   </div>
                 </div>
               ))}

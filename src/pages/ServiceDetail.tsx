@@ -12,6 +12,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CloudinaryImage from "@/components/CloudinaryImage";
+import { P } from "@/components/Text";
 import { openTallyForm } from "@/lib/tally";
 
 interface ServiceContent {
@@ -342,7 +343,7 @@ const ServiceDetail = () => {
 
 						{/* Subtitle */}
 						<div className='overflow-hidden pb-4'>
-							<p
+							<P
 								className={`text-white/90 text-lg md:text-xl font-light transition-all duration-1000 delay-200 ${
 									heroVisible
 										? "opacity-100 translate-y-0"
@@ -354,7 +355,7 @@ const ServiceDetail = () => {
 								}}
 							>
 								{service.subtitle}
-							</p>
+							</P>
 						</div>
 					</div>
 				</div>
@@ -378,12 +379,12 @@ const ServiceDetail = () => {
 									<Clock className='w-5 h-5 text-primary' />
 								</div>
 								<div>
-									<p className='text-sm text-foreground/60 mb-1'>
+									<P className='text-sm text-foreground/60 mb-1'>
 										Czas trwania
-									</p>
-									<p className='font-medium text-foreground'>
+									</P>
+									<P className='font-medium text-foreground'>
 										{service.duration}
-									</p>
+									</P>
 								</div>
 							</div>
 
@@ -393,12 +394,12 @@ const ServiceDetail = () => {
 									<Sparkles className='w-5 h-5 text-primary' />
 								</div>
 								<div>
-									<p className='text-sm text-foreground/60 mb-1'>Cena</p>
-									<p className='font-medium text-foreground'>{service.price}</p>
+									<P className='text-sm text-foreground/60 mb-1'>Cena</P>
+									<P className='font-medium text-foreground'>{service.price}</P>
 									{service.priceNote && (
-										<p className='font-bold text-xs text-foreground/50 italic mt-1'>
+										<P className='font-bold text-xs text-foreground/50 italic mt-1'>
 											{service.priceNote}
-										</p>
+										</P>
 									)}
 								</div>
 							</div>
@@ -432,9 +433,9 @@ const ServiceDetail = () => {
 											: "opacity-0 translate-y-12"
 									}`}
 								>
-									<p className='text-xl md:text-2xl text-foreground/70 font-light leading-relaxed'>
+									<P className='text-xl md:text-2xl text-foreground/70 font-light leading-relaxed'>
 										{service.description}
-									</p>
+									</P>
 								</div>
 								{/* Decorative line */}
 								<div className='w-16 h-px bg-gradient-to-r from-primary/50 to-transparent mb-0 mt-12' />
@@ -458,12 +459,12 @@ const ServiceDetail = () => {
 
 								<div className='space-y-4'>
 									{section.content.map((paragraph, pIndex) => (
-										<p
+										<P
 											key={pIndex}
 											className='text-foreground/70 text-base md:text-lg leading-relaxed font-light'
 										>
 											{paragraph}
-										</p>
+										</P>
 									))}
 								</div>
 
@@ -517,12 +518,12 @@ const ServiceDetail = () => {
 										<div className='space-y-4 ml-0 md:ml-16'>
 											{service.importantNote.content.map(
 												(paragraph, pIndex) => (
-													<p
+													<P
 														key={pIndex}
 														className='text-foreground/80 text-base md:text-lg leading-relaxed font-normal'
 													>
 														{paragraph}
-													</p>
+													</P>
 												)
 											)}
 										</div>
