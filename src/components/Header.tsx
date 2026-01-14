@@ -18,7 +18,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const isOnHomePage = location.pathname === '/';
-  const isOnPotwierdzeniePage = location.pathname === '/potwierdzenie';
+  const isOnPotwierdzeniePage = location.pathname === '/v1-dziekuje-za-wypelnienie-formularza';
 
   // Force dark styling on confirmation page (light background)
   const useDarkStyling = isScrolled || isOnPotwierdzeniePage;
