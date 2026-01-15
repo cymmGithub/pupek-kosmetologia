@@ -101,10 +101,10 @@ const Footer = () => {
 							<li className='flex items-center gap-3'>
 								<Mail className='h-4 w-4 flex-shrink-0 text-primary-foreground/50' />
 								<a
-									href='mailto:pupek.kosmetologia@gmail.com'
+									href='mailto:kontakt@pupekkosmetologia.pl'
 									className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
 								>
-									pupek.kosmetologia@gmail.com
+									kontakt@pupekkosmetologia.pl
 								</a>
 							</li>
 							<li className='flex items-center gap-3'>

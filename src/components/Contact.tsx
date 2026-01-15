@@ -46,14 +46,14 @@ const Contact = () => {
               }`}
             >
               <a
-                href="mailto:pupek.kosmetologia@gmail.com"
+                href="mailto:kontakt@pupekkosmetologia.pl"
                 className="group flex items-center gap-3 text-foreground hover:text-primary transition-all duration-300"
               >
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </div>
                 <span className="text-base md:text-lg relative">
-                  pupek.kosmetologia@gmail.com
+                  kontakt@pupekkosmetologia.pl
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
                 </span>
               </a>
