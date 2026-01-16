@@ -1,6 +1,7 @@
 import { Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { P } from "@/components/Text";
+import { CookieSettingsButton } from "@/components/CookieBanner";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -121,11 +122,20 @@ const Footer = () => {
 				</div>
 
 				{/* Bottom Bar */}
-				<div className='mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-center items-center gap-4'>
+				<div className='mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4'>
 					<P className='text-primary-foreground/50 text-sm font-light'>
 						© {currentYear} Pupek Kosmetologia Klinika Skóry. Wszelkie prawa
 						zastrzeżone.
 					</P>
+					<div className='flex items-center gap-6'>
+						<Link
+							to='/polityka-prywatnosci'
+							className='text-primary-foreground/70 hover:text-primary-foreground text-sm font-light transition-colors'
+						>
+							Polityka prywatności
+						</Link>
+						<CookieSettingsButton />
+					</div>
 				</div>
 			</div>
 		</footer>
