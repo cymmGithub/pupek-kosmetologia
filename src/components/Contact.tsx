@@ -119,7 +119,7 @@ const Contact = () => {
               <div className="relative w-full h-full overflow-hidden rounded-xl shadow-2xl">
                 <img
                   src="/contact.jpg"
-                  alt="Contact"
+                  alt="Gabinet kosmetologiczny Pupek Kosmetologia"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Subtle overlay gradient */}

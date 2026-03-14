@@ -86,11 +86,13 @@ const Services = () => {
 				<img
 					src={willowBg}
 					alt=''
+					loading='lazy'
 					className='absolute top-0 left-10 w-56 md:w-72 opacity-[0.04] transform -rotate-6'
 				/>
 				<img
 					src={willowBg}
 					alt=''
+					loading='lazy'
 					className='absolute bottom-0 right-10 w-64 md:w-96 opacity-[0.05] transform rotate-6 scale-x-[-1]'
 				/>
 			</div>

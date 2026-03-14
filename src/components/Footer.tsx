@@ -21,7 +21,7 @@ const Footer = () => {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
 					{/* Brand */}
 					<div className='lg:col-span-1'>
-						<h1 className='text-2xl tracking-wider mb-4'>pupek kosmetologia</h1>
+						<span className='font-the-seasons-regular text-2xl tracking-wider mb-4 block'>pupek kosmetologia</span>
 						<P className='text-primary-foreground/70 font-light text-sm leading-relaxed'>
 							Zacznij działać świadomie i wprowadzać zmiany, które pozwolą Ci
 							uzyskać realne rezultaty.

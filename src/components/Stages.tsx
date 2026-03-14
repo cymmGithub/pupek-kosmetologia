@@ -111,36 +111,42 @@ const Stages = () => {
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.04] transform rotate-12"
         />
         {/* Top left */}
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute top-32 left-10 w-40 md:w-56 opacity-[0.04] transform -rotate-6 scale-x-[-1]"
         />
         {/* Middle right */}
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute top-1/2 right-20 w-48 md:w-64 opacity-[0.04] transform rotate-45"
         />
         {/* Middle left */}
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute top-1/2 left-5 w-56 md:w-72 opacity-[0.04] transform -rotate-20 scale-x-[-1]"
         />
         {/* Bottom right */}
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute bottom-32 right-10 w-52 md:w-72 opacity-[0.04] transform rotate-6"
         />
         {/* Bottom left */}
         <img
           src={willowBg}
           alt=""
+          loading="lazy"
           className="absolute bottom-20 left-0 w-48 md:w-80 opacity-[0.04] transform -rotate-12 scale-x-[-1]"
         />
       </div>

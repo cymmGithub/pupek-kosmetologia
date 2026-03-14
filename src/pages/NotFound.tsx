@@ -1,21 +1,13 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import { P } from "@/components/Text";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <div className="text-center">
-        <h1 className="font-milven mb-4 text-4xl font-bold">404</h1>
-        <P className="mb-4 text-xl text-muted-foreground">Oops! Page not found</P>
+        <h1 className="font-serif mb-4 text-4xl font-bold">404</h1>
+        <P className="mb-4 text-xl text-muted-foreground">Strona nie została znaleziona</P>
         <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
+          Powrót do strony głównej
         </a>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Button } from "@/components/ui/button";
 import { P } from "@/components/Text";
 import parallaxBg from "@/assets/parallax-bg.jpg";
 
