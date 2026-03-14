@@ -157,7 +157,10 @@ const Services = () => {
 									? "opacity-100 translate-y-0"
 									: "opacity-0 translate-y-12"
 							}`}
-							style={{ transitionDelay: `${index * 100}ms` }}
+							style={{
+								transitionDelay: `${index * 100}ms`,
+								transitionTimingFunction: 'var(--ease-out-expo)',
+							}}
 						>
 							{/* Hover glow effect */}
 							<div className='absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-xl' />

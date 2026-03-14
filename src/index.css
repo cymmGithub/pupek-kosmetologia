@@ -61,6 +61,10 @@
     --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
     --shadow-card: 0 8px 30px -8px hsl(30 20% 20% / 0.1);
 
+    /* Easing curves — refined exponential deceleration */
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
   }
 
   .dark {
@@ -146,7 +150,8 @@
   .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.8s var(--ease-out-quart),
+                transform 0.8s var(--ease-out-quart);
   }
 
   .reveal.active {
@@ -262,5 +267,82 @@
   .card-hover:hover {
     @apply -translate-y-1;
     box-shadow: var(--shadow-card);
+  }
+
+  /* Scroll indicator breathing pulse */
+  @keyframes breathe {
+    0%, 100% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(6px);
+    }
+  }
+
+  .animate-breathe {
+    animation: breathe 2.5s var(--ease-out-quart) infinite;
+  }
+
+  /* Stage image reveal with clip */
+  @keyframes image-reveal {
+    from {
+      clip-path: inset(8% 8% 8% 8%);
+      opacity: 0;
+    }
+    to {
+      clip-path: inset(0% 0% 0% 0%);
+      opacity: 1;
+    }
+  }
+
+  .image-reveal {
+    clip-path: inset(8% 8% 8% 8%);
+    opacity: 0;
+    transition: clip-path 1s var(--ease-out-expo),
+                opacity 0.8s var(--ease-out-quart);
+  }
+
+  .image-reveal.active {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
+
+  /* Mobile menu grid transition */
+  .mobile-menu-grid {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s var(--ease-out-quart);
+  }
+
+  .mobile-menu-grid.open {
+    grid-template-rows: 1fr;
+  }
+
+  .mobile-menu-grid > div {
+    overflow: hidden;
+  }
+}
+
+/* Reduced motion: disable all non-essential animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .image-reveal {
+    clip-path: none;
+    opacity: 1;
   }
 }

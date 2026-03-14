@@ -148,7 +148,7 @@ const Hero = () => {
 					<span className='text-[10px] tracking-[0.3em] mb-3 font-light uppercase'>Przewiń</span>
 					<div className='relative'>
 						<div className='absolute inset-0 bg-primary-foreground/10 rounded-full blur-md scale-150 group-hover:scale-200 transition-transform duration-500' />
-						<ChevronDown className='relative h-5 w-5 animate-float' />
+						<ChevronDown className='relative h-5 w-5 animate-breathe' />
 					</div>
 				</button>
 			</div>

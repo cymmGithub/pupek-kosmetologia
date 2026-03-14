@@ -163,10 +163,11 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+          className={`lg:hidden mobile-menu-grid ${
+            isMobileMenuOpen ? 'open mt-4' : ''
           }`}
         >
+          <div>
           <nav className="flex flex-col gap-4 py-4 bg-background/95 backdrop-blur-md rounded-lg px-4">
             {navLinks.map((link) => (
               <a
@@ -185,6 +186,7 @@ const Header = () => {
               UMÓW KONSULTACJĘ
             </Button>
           </nav>
+          </div>
         </div>
       </div>
     </header>

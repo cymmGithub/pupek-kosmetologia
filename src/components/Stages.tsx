@@ -49,14 +49,17 @@ const StageCard = ({ stage, index }: { stage: typeof stages[0]; index: number })
   return (
     <div
       ref={stageRef}
-      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center transition-all duration-1000 ease-out ${
+      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
+      style={{ transitionTimingFunction: 'var(--ease-out-expo)' }}
     >
       {/* Image */}
       <div className="w-full lg:w-1/2">
         <div className="relative aspect-[4/3]">
-          <div className="relative overflow-hidden rounded-xl shadow-xl">
+          <div className={`relative overflow-hidden rounded-xl shadow-xl image-reveal ${
+            isVisible ? 'active' : ''
+          }`}>
             <img
               src={stage.image}
               alt={stage.title}

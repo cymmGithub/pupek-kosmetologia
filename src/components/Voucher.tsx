@@ -56,11 +56,14 @@ const Voucher = () => {
 									<div className='absolute -inset-4 bg-gradient-to-br from-primary-foreground/20 via-accent/20 to-primary-foreground/20 rounded-2xl blur-2xl opacity-50 group-hover:opacity-100 transition-all duration-700' />
 
 									{/* Image container */}
-									<div className='relative overflow-hidden rounded-xl shadow-2xl'>
+									<div className={`relative overflow-hidden rounded-xl shadow-2xl image-reveal ${
+										imageVisible ? 'active' : ''
+									}`}>
 										<img
 											src={voucherImage}
 											alt='Voucher prezentowy Pupek Kosmetologia'
 											className='max-w-full h-auto transition-transform duration-700 group-hover:scale-105'
+											style={{ transitionTimingFunction: 'var(--ease-out-quart)' }}
 										/>
 										{/* Subtle overlay on hover */}
 										<div className='absolute inset-0 bg-gradient-to-t from-primary-foreground/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700' />
